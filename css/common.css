@@ -1,0 +1,392 @@
+@charset 'utf-8';
+@import url('webfonts.css');
+/* =============== 변수 ============== */
+:root {
+  --primary-font: 'PT Serif', 'Pretendard Variable', sans-serif;
+  --secondary-font: 'Pretendard Variable', sans-serif;
+  --PTSerif-font: 'PT Serif','Nanum Myeongjo', serif;
+  --primary-color: #142A74;
+  --secondary-color: #F2F4F7;
+  --primary-font-color: #142A74;
+  --secondary-font-color: rgb(242, 244, 247);
+  --gray-font-color: #B9B9B9;
+  --point-color:#F6DFEA;
+  --google-icon: 'Material Symbols Outlined';
+  --spacing-xs: 12px;
+  --spacing-s: 24px;
+  --spacing-m: 40px;
+  --spacing-l: 100px;
+}
+
+/* ============ 초기화 ============ */
+* { padding: 0; margin: 0; box-sizing: border-box; }
+*:before, *:after{ box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;  
+  font-size: 16pt;
+}
+body { /*배경색, 글자(사이즈, 색상,글꼴,줄간격) */
+  font-size: 16px;
+  font-family: var(--primary-font);
+  color: var(--primary-font-color);
+  line-height: 1.6;
+  background-color: var(--secondary-color);
+  word-break: keep-all; 
+}
+body.fixed { /*문서를 덮는 모달 창이 등장 했을때 아래의 문서 내용이 스크롤 되면 안됨*/
+  overflow: hidden;
+}
+ol, ul, li {
+  list-style-type: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+img, video, iframe {
+  vertical-align: middle;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+input, select, textarea, button {
+  border: 0;
+  font-size: 1em;
+  background-color: transparent;
+  font-family: var(--primary-font);
+}
+button {
+  cursor: pointer;
+}
+
+/* ====== 공용디자인 & 공용클래스 ======= */
+.wrap {
+  max-width: 1900px;
+  padding: 0 8px;
+  margin: auto;
+}
+.blind {
+  position: absolute; 
+  left: -9999em;
+}
+.clearfix:after {
+  /* 1번 솔루션 = overflow: auto; 
+    > 플롯으로 가로 나열한 자식을 가진 부모영역에서는 얘가 자식을 알아서 찾음 높이 문제 해결! / 클리어픽스 필요 없음/ but 익스플로러 낮은 버전에선 활성화가 안됨 */
+  /* 2번 솔루션= */
+  content: '';
+  display: block;
+  clear: both; /* 양 옆에 아무도 없게끔 너 혼자 맨 끝으로 자리 잡아라 */
+  /* 가로나열을 플롯(float)으로 하는경우 부모의 높이가 제로가 됨 
+  그래서 가상 요소인 after를 만들어서 맨끝에 생성하고 높이를 잡을수 있게 해줌 */
+  /*플룻 문법 부모와 절대 섞이지 않음 부모가 막내를 만들어서 형들과 안붙을거야 난 내려갈게 3개가 세트세트 > 이제는 플렉스로 사용됨 (플렉스는 7-8년전)*/
+} 
+.wh, .wh a {
+  color: #fff;
+}
+.bk, .bk a {
+  color: #000;
+}
+.primary, .primary a {
+  color: var(--primary-font-color);
+}
+.second, .second a {
+  color: var(--secondary-font-color);
+}
+
+/* ======= 헤더 ======== */
+#rockfish-hd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;;
+  background-color: var(--primary-color);
+}
+.hd-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.logo {
+  width: 50%;
+  min-width: 100px;
+  max-width: 150px;
+  font-size: 1em;
+  line-height: 0;
+}
+.logo a {}
+.logo img {
+  width: 100%;
+}
+#rockfish-gnb {
+  display: none;
+}
+.rockfish-gnb {
+  display: flex;
+}
+.rf-depth1 {}
+.rf-depth1 > a {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  padding: 0 40px;
+  font-size: 1.2em;
+}
+.rf-depth1 > a:hover {
+  text-decoration: underline;
+}
+.rf-depth2-wrap {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 70px;
+  width: 100%;
+  padding: 16px;
+  background-color: var(--primary-color);
+}
+.rf-depth2-wrap:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 99%;
+  height: 1px;
+  transform: translateX(-50%);
+  background-color: var(--secondary-color);
+  opacity: 0.5;
+}
+.rf-depth2-wrap:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateX(-50%);
+  background-color: var(--secondary-color);
+  opacity: 0.5;
+}
+.rf-depth2 {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+.rf-depth2 li {}
+.rf-depth2 li:hover {
+  text-decoration: underline;
+}
+.rf-depth2 a {}
+
+/* ======= 유틸메뉴 ======= */
+.util-menu {}
+
+.util-menu-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+.util-menu li {
+  display: none;
+}
+.util-menu li:hover {
+  text-decoration: underline;
+}
+.util-menu-wrap > li > a {
+  font-size: 16px;
+  color: #fff; 
+}
+.lang-wrap {
+  position: relative;
+  float: left;
+}
+.util-menu button:before {
+  font-family: var(--google-icon);
+  font-size: 24px;
+}
+.btn-lang:before {
+  content: '\e894';
+  color: var(--secondary-color);
+}
+.btn-sitemap:before {
+  content: '\e5d2';
+  color: var(--secondary-color);
+}
+.lang-list {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 17px);
+  padding: 8px 24px;
+  margin: 0;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+}
+.lang-list a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+}
+.btn-sitemap {
+  margin-left: 0.8em;
+}
+
+
+
+/* 플렉스와 플롯 */
+/* overflow: auto; 
+ / 플롯으로 가로 나열한 자식을 가진 부모영역에서는 얘가 자식을 알아서 찾음 높이 문제 해결! 
+ / 클리어픽스 필요 없음
+ / but 익스플로러 낮은 버전에선 활성화가 안됨 */
+
+/* 푸터 */
+
+/* ======== 모바일GNB, pc 사이트맵 ========= */
+
+.mo-gnb-sitemap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: calc(100% - 60px);
+  z-index: 9999;
+  padding: 0;
+  margin-left: auto;
+  color: var(--primary-color);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  backdrop-filter: blur(2px);
+  background-color: rgba(242, 244, 247, 0.9);
+  transform: translateX(100%);
+  transition: 0.5s;
+}
+.mo-gnb-sitemap.open {
+  transform: translateX(0);
+}
+.mo-gnb-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mo-search-wrap {
+  display: flex;
+  position: relative;
+  width: 140px;
+  margin: auto;
+}
+.mo-search-input {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid var(--primary-color);
+  padding: 5px;
+}
+/* 돋보기 버튼 */
+.mo-search-btn {
+  position: absolute;
+  right: 0;
+  background: none;
+}
+.mo-search-btn:before {
+  content: '\e8b6';
+  font-family: var(--google-icon);
+  font-size: 26px;
+  color: var(--primary-color);
+}
+/* 닫기버튼 */
+.mo-btn-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  color: var(--primary-color);
+}
+.mo-btn-close:before {
+  content: '\e5cd';
+  font-size: 2em;
+  font-family: var(--google-icon);
+}
+#mo-rockfish-gnb a {
+  display: flex;
+  justify-content: space-between;
+}
+#mo-rockfish-gnb {
+  height: calc(100vh - 80px);
+  padding: 24px;
+  padding-top: 0;
+  overflow: auto;
+}
+.mo-rockfish-gnb {}
+.mo-rf-depth1 {
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0);
+}
+.mo-rf-depth1 > a {
+  padding: 0 8px;
+  font-size: 1.25em;
+  font-weight: bold;
+  line-height: 3;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+.mo-rf-depth1 > a:before {
+  content: '';
+  font-family: var(--google-icon);
+  transition: var(--speed);
+  text-align: left;
+}
+.mo-rf-depth2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+  background-color: rgba(0,0,0,0.05);
+}
+.mo-rf-depth2 a {
+  text-align: left;
+}
+.mo-rf-depth2 > li {
+  display: block;
+}
+.mo-rf-depth2 > li > a {
+  display: block;
+  color: var(--primary-color);
+  padding: 0.6em;
+  opacity: 0.8;
+}
+.mo-rf-depth2 > li:hover > a, .mo-rf-depth2 > li.active > a {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.mo-rf-depth1.active > a:after{
+  transform: scaleY(-1);
+}
+.mo-rf-depth1.active .mo-depth2{
+  display: block;
+}
+
+.mo-util-menu ul {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-right: 28px;
+}
+.mo-util-menu li {
+  font-size: 0.9em;
+  color: var(--primary-color);
+  opacity: 0.5;
+}
+.mo-lang-wrap {
+  position: relative;
+  float: left;
+}
+.mo-btn-lang:before {
+  font-family: var(--google-icon);
+  content: '\e894';
+  color: var(--secondary-color);
+}

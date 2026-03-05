@@ -1,0 +1,98 @@
+@charset 'utf-8';
+/* 기본 *모바일 우선 */
+
+/* 1. mo-nomal */
+@media screen and (max-width: 767px) {}
+
+/* 2. tablet~ */
+@media screen and (min-width: 768px) {
+  .hd-container {
+    justify-content: space-between;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  .mo-gnb-sitemap {
+    width: calc(100% - 100px);
+  }
+  #mo-rockfish-gnb {
+    display: flex;
+    align-items: flex-start;
+    height: calc(100vh - 70px);
+    font-size: 1em;
+  }
+  .mo-rockfish-gnb {
+    width: 100%;
+  }
+  .mo-rf-depth1 {
+    padding: 1em 0;
+  }
+  .mo-rf-depth1 > a {
+    padding: 0;
+    line-height: 1.8;
+  }
+  .mo-rf-depth2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: flex-end;
+  }
+  .mo-rf-depth2 > li {
+    white-space: nowrap;
+  }
+  .mo-rf-depth2 a {
+    display: block;
+    text-align: left;
+  }
+  .mo-rf-depth1 > a:before {
+    content: '';
+  }
+}
+
+/* 3. only tb */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .hd-container {
+    justify-content: space-between;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+}
+
+/* 4. laptop~ 1280~ */
+@media screen and (min-width: 1280px) {
+  .wrap {
+    padding: 0 24px;
+  }
+  .hd-container {
+    justify-content: center;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  #rockfish-gnb {
+    display: block;
+  }
+  .logo {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .util-menu {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 1em;
+  }
+  .btn-sitemap {
+    display: none;
+  }
+  .util-menu li {
+    display: block;
+  }
+  .mo-gnb-sitemap, #mo-rockfish-gnb {
+    display: none;
+  }
+}
+
+/* 5. laptop~ 1921~ */
+@media screen and (min-width: 1921px) {}

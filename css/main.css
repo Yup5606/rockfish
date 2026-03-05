@@ -1,0 +1,231 @@
+@charset 'utf-8';
+
+/* 메인 섹션 공용 */
+#rockfish-main {}
+.main-section {
+  min-height: 100vh;
+  border-bottom: 1px solid #000;
+}
+.main-section h2 {}
+.main-container {}
+
+/* 1. 메인 히어로 영역 */
+.main-section-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 100%;
+  max-height: 1080px;
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(-50%);
+}
+.hero-video-mo {
+  display: block;
+}
+.hero-video-pc {
+  display: none;
+}
+/* 2. 브랜드 소개 영역 */
+.main-section-brand {
+  position: relative;
+  height: 105vh;
+  overflow: hidden;
+  background-color: var(--primary-color);
+}
+.brand-wrap {
+  height: 100%;
+}
+.brand-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.brand-logo {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.6s ease-out;
+}
+.brand-logo img {
+  width: 180px;
+}
+.brand-intro-wrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: 32px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.8s ease-out;
+}
+.brand-intro p {
+  text-align: center;
+  padding: 1em;
+  font-size: 0.8em;
+  color: var(--secondary-color);
+}
+
+/* 활성화 */
+.main-section-brand.active .brand-logo {
+  transform: translate(-50%, -100%);
+}
+
+.main-section-brand.active .brand-intro-wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* 3. 컬렉션 영역 */
+.main-section-collection {
+  padding: var(--spacing-xs) 0;
+}
+.collection-wrap {}
+.collection-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 200px);
+}
+
+.collection-container-wrap {
+}
+/* 제품 이름 */
+.item-name {
+  padding-top: 12px;
+  padding-left: 12px;
+}
+.item-name li {
+  line-height: 2.3em;
+  font-size: 1.1em;
+  color: var(--gray-font-color);
+}
+.item-name li:first-child {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* 제품 이미지 */
+.item-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.item-img li {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.item-img li:nth-child(1) {
+  display: block;
+}
+
+.item-img img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 80%;
+  margin:  0 auto;
+}
+
+/* 제품 상세이름+설명 */
+.item-desc-group {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: end;
+}
+.desc-box {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  padding-right: 12px;
+  text-align: end;
+}
+.desc-box1 {display: block;}
+.desc-box h3 {
+  font-size: 1em;
+}
+.desc-box p {
+  width: 100%;
+  height: 105px;
+  font-size: 0.8em;
+  color: var(--gray-font-color);
+}
+
+/* 뷰모어버튼 */
+.btn-more {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-view-more {
+  color: var(--gray-font-color);
+}
+.btn-view-more:after {
+  content: '\e89e';
+  font-family: var(--google-icon);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* 4. 추천 스타일 영역 */
+.main-section-recommend {
+  padding: var(--spacing-m) 0;
+}
+.recommend-wrap {}
+.recommend-container {}
+
+/* 5. 국내외 스토어 영역 */
+.main-section-store {
+  padding: var(--spacing-m) 0;
+
+}
+.store-wrap {}
+.store-container {}
+
+
+/* 6. 고객 후기 영역 */
+.main-section-realmoments {
+  padding: var(--spacing-m) 0;
+}
+.realmoments-wrap {}
+.realmoments-container {}
