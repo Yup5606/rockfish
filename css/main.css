@@ -114,11 +114,10 @@
 }
 /* 제품 이름 */
 .item-name {
-  padding-top: 12px;
-  padding-left: 12px;
+  padding: 12px;
 }
 .item-name li {
-  line-height: 2.3em;
+  line-height: 2em;
   font-size: 1.1em;
   color: var(--gray-font-color);
 }
@@ -153,7 +152,7 @@
   top: 50%;
   transform: translateY(-50%);
   display: block;
-  width: 80%;
+  width: 70%;
   margin:  0 auto;
 }
 
