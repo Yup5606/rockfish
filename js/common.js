@@ -63,13 +63,13 @@ $(moClose).click(function(){
 
 
 // 모바일 메뉴 펼치기 접기
-$(smMainMenu).click(function(e){
-  if($(body).hasClass("mo")){ //모바일 해상도로 바디에 클래스가 찍혔을때
-    e.preventDefault(); // <a>의 링크 기능 실행을 막는것 
-    $(this).parent().siblings().find(smSubMenu).stop().slideUp(300);
-    $(this).next().stop().slideToggle(300);
-  }
-});
+// $(smMainMenu).click(function(e){
+//   if($(body).hasClass("mo")){ //모바일 해상도로 바디에 클래스가 찍혔을때
+//     e.preventDefault(); // <a>의 링크 기능 실행을 막는것 
+//     $(this).parent().siblings().find(smSubMenu).stop().slideUp(300);
+//     $(this).next().stop().slideToggle(300);
+//   }
+// });
 
 // 임시링크 실행 막기
 $(blankAnchor).click(function(e){

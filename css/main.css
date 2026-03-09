@@ -45,59 +45,171 @@
 .hero-video-pc {
   display: none;
 }
+
 /* 2. 브랜드 소개 영역 */
-.main-section-brand {
-  position: relative;
-  height: 105vh;
-  overflow: hidden;
-  background-color: var(--primary-color);
+.main-section-brand{
+  position:relative;
+  width:100%;
+  height: 100vh;
+  padding:100px 20px;
+  background:var(--primary-color);
+  overflow:hidden;
 }
-.brand-wrap {
-  height: 100%;
+
+/* background */
+.brand-bg{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index: 1;
 }
-.brand-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+
+/* circle */
+.bg-circle{
+  position:absolute;
+  width:480px;
+  height:480px;
+  top:30%;
+  left:-220px;
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:50%;
+  transform:translateY(-50%);
+  animation:circleRotate 30s linear infinite;
 }
-.brand-logo {
+
+.circle-text{
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.6s ease-out;
+  width:300px;
+  height:300px; 
 }
-.brand-logo img {
-  width: 180px;
+
+.circle-text svg{
+  width:100%;
+  height:100%;
+  animation:circleRotate 10s linear infinite;
 }
-.brand-intro-wrap {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  padding: 32px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.8s ease-out;
+
+.circle-text text{
+  font-size: 12px;
+  fill: rgba(255,255,255,.4);
+  letter-spacing:3px;
 }
-.brand-intro p {
-  text-align: center;
-  padding: 1em;
-  font-size: 0.8em;
+
+/* vertical line */
+.bg-line{
+  position:absolute;
+  width:1px;
+  height:60%;
+  top:20%;
+  right:20px;
+  background:rgba(255,255,255,.4);
+  transform:scaleY(0);
+  transform-origin:top;
+  animation:lineDraw 1.5s ease forwards;
+}
+
+/* diagonal line */
+.bg-deg{
+  position:absolute;
+  width:1px;
+  height: 120vh;
+  background: rgba(255,255,255,.4);
+  transform-origin:top;
+}
+  
+.diag-1{
+  top:3%;
+  left:100%;
+  transform:rotate(65deg);
+  animation: degMove1 5s linear;
+}
+
+.diag-2{
+  top:90%;
+  left: 100%;
+  transform:rotate(148deg);
+  animation: degMove2 3s linear;
+}
+
+/* layout */
+.brand-container{
+  position:relative;
+  gap:80px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  top: 10%;
+}
+
+/* title */
+.brand-title{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.brand-title h3{
+  width: 65%;
+  align-items: flex-start;
+  margin-bottom:10px;
+  font-size:1.3em;
+  font-weight:lighter;
+  color:var(--secondary-color);
+}
+
+.brand-title img{
+  width:65%;
+  min-width:180px;
+  max-width:400px;
+}
+
+/* text */
+.brand-intro{
+  width:250px;
+  font-family: var(--PTSerif-font);
   color: var(--secondary-color);
 }
 
-/* 활성화 */
-.main-section-brand.active .brand-logo {
-  transform: translate(-50%, -100%);
+.brand-intro p{
+  margin-bottom:18px;
+  font-size:0.8em;
+  font-weight: lighter;
+  line-height: 2.3;
+  opacity:0;
+  transform:translateY(40px);
+  animation:textUp 2s ease forwards;
 }
 
-.main-section-brand.active .brand-intro-wrap {
-  opacity: 1;
-  transform: translateY(0);
+.brand-intro p:nth-child(1){animation-delay:.5s;}
+.brand-intro p:nth-child(2){animation-delay:.7s;}
+
+@keyframes circleRotate{
+  0%{transform:translateY(-50%) rotate(0);}
+  100%{transform:translateY(-50%) rotate(360deg);}
 }
 
+@keyframes lineDraw{
+  0%{transform:scaleY(0);}
+  100%{transform:scaleY(1);}
+}
+
+@keyframes degMove1{
+  0%{transform:rotate(65deg) translateY(-100px) scaleY(0);}
+  100%{transform:rotate(65deg) translateY(100px) scaleY(1);}
+}
+
+@keyframes degMove2{
+  0%{transform:rotate(148deg) translateY(-120px) scaleY(0);}
+  100%{transform:rotate(148deg) translateY(120px) scaleY(1);}
+}
+
+@keyframes textUp{
+  0%{opacity:0;transform:translateY(40px);}
+  100%{opacity:1;transform:translateY(0);}
+}
 
 /* 3. 컬렉션 영역 */
 .main-section-collection {
@@ -128,31 +240,30 @@
 
 /* 제품 이미지 */
 .item-img {
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
+  max-width: 100px;
 }
 .item-img li {
   display: none;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .item-img li:nth-child(1) {
   display: block;
 }
 
 .item-img img {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   display: block;
-  width: 70%;
+  width: 100%;
   margin:  0 auto;
 }
 
@@ -174,9 +285,7 @@
   text-align: end;
 }
 .desc-box1 {display: block;}
-.desc-box h3 {
-  font-size: 1em;
-}
+.desc-box h3 {font-size: 1em;}
 .desc-box p {
   width: 100%;
   height: 105px;
