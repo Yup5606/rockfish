@@ -107,7 +107,6 @@
   background:rgba(255,255,255,.4);
   transform:scaleY(0);
   transform-origin:top;
-  animation:lineDraw 1.5s ease forwards;
 }
 
 /* diagonal line */
@@ -123,14 +122,22 @@
   top:3%;
   left:100%;
   transform:rotate(65deg);
-  animation: degMove1 5s linear;
 }
 
 .diag-2{
   top:90%;
   left: 100%;
   transform:rotate(148deg);
-  animation: degMove2 3s linear;
+}
+
+.main-section-brand.active .bg-line {
+  animation: lineDraw 1.5s ease forwards;
+}
+.main-section-brand.active .diag-1{
+  animation: degMove1 5s linear forwards;
+}
+.main-section-brand.active .diag-2{
+  animation: degMove2 3s linear forwards;
 }
 
 /* layout */
@@ -180,7 +187,9 @@
   line-height: 2.3;
   opacity:0;
   transform:translateY(40px);
-  animation:textUp 2s ease forwards;
+}
+.main-section-brand.active .brand-intro p {
+  animation: textUp 3s ease-in forwards;
 }
 
 .brand-intro p:nth-child(1){animation-delay:.5s;}
