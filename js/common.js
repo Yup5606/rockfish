@@ -23,10 +23,10 @@ $(window).resize(function(){
   rwd();
 }); 
 
-  // 2. 실행될 스크립트 작성
-  // GNB 구현 타켓에, 어떤이벤트가, 함수가 선언되면 순서
+// 2. 실행될 스크립트 작성
+// GNB 구현 타켓에, 어떤이벤트가, 함수가 선언되면 순서
 
-  // ======== 가로풀다운 =========
+// ======== 가로풀다운 =========
 $(mainMenu).mouseenter(function(){
   $(this).find(subMenu).stop().slideDown(speed);
 });
@@ -54,11 +54,13 @@ $(btnLang).mouseenter(function(){
 $(moOpen).click(function(){
   $(body).addClass("fixed");
   $(moGnb).addClass("open");
+  lenis.stop();
 });
 
 $(moClose).click(function(){
   $(body).removeClass("fixed");
   $(moGnb).removeClass("open");
+  lenis.start();
 });
 
 
