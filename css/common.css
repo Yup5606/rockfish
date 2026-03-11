@@ -22,10 +22,10 @@
 * { padding: 0; margin: 0; box-sizing: border-box; }
 *:before, *:after{ box-sizing: border-box; }
 html {
-  scroll-behavior: smooth;  
-  font-size: 16pt;
+  font-size: 16px;
 }
 body { /*배경색, 글자(사이즈, 색상,글꼴,줄간격) */
+  padding-top: 70px;
   font-size: 16px;
   font-family: var(--primary-font);
   color: var(--primary-font-color);
@@ -255,8 +255,11 @@ button {
   bottom: 0;
   width: calc(100% - 60px);
   z-index: 9999;
+  display: flex;
+  flex-direction: column;
   padding: 0;
   margin-left: auto;
+  overflow: hidden;
   color: var(--primary-color);
   box-shadow: 2px 0 5px rgba(0,0,0,0.2);
   backdrop-filter: blur(2px);
@@ -317,6 +320,9 @@ button {
   justify-content: space-between;
 }
 #mo-rockfish-gnb {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   height: calc(100vh - 80px);
   padding: 24px;
   padding-top: 0;
@@ -384,12 +390,23 @@ button {
   color: var(--primary-color);
   opacity: 0.5;
 }
+/* 모바일 언어선택 버튼 */
+
 .mo-lang-wrap {
-  position: relative;
-  float: left;
+  position: absolute;
+  right: 24px;
+  bottom: 0;
+  transform: translateY(-50%); 
 }
-.mo-btn-lang:before {
-  font-family: var(--google-icon);
+.mo-btn-lang {}
+.mo-btn-lang:after {
   content: '\e894';
-  color: var(--secondary-color);
+  font-family: var(--google-icon);
+  font-size: 24px;
+  color: var(--primary-color);
 }
+.mo-lang-list {
+  display: flex;
+  flex-direction: column;
+}
+.mo-lang-list li {}

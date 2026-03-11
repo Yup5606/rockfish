@@ -93,7 +93,18 @@ rwd();
     // $(smSubMenu),attr("style","")
   }
 
-
+ // 부드러운 스크롤
+  const lenis = new Lenis({
+    lerp: 0.05, // < 속도 조절때만 수치 변경
+    smoothWheel: true,
+    smoothTouch: false // < 기본값
+  }
+  );
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
 
 
 });

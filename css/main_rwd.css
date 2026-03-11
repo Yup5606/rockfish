@@ -21,11 +21,7 @@
   .brand-container {
     position: relative;
   }
-  .brand-intro-wrap {
-    position: absolute;
-    top: 50%;
-    transform: translateY(50px);
-  }
+
   .brand-logo img {
     width: 240px;
   }

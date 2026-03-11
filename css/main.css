@@ -189,7 +189,7 @@
   transform:translateY(40px);
 }
 .main-section-brand.active .brand-intro p {
-  animation: textUp 3s ease-in forwards;
+  animation: textUp 1s ease-in forwards;
 }
 
 .brand-intro p:nth-child(1){animation-delay:.5s;}
