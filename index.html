@@ -17,11 +17,23 @@
     <script src="js/main.js"></script>  <!-- 순서중요 제이쿼리 쓰려면 위 3줄 꼭 첨부-->
 </head>
 <body>
+
+  <!-- 1. 바로가기 메뉴 -->
+  <div id="cv-skip">
+      <a href="#cv-main">본문 바로가기</a>
+      <a href="#cv-gnb">주 메뉴 바로가기</a>
+      <a href="#cv-lnb">서브 메뉴 바로가기</a>
+      <a href="#cv-ft">하단 정보 바로가기</a>
+  </div>
+
   <header id="rockfish-hd" class="second">
     <div class="hd-container wrap">
       <h1 class="logo"> <!-- 헤더로고 -->
         <a href="index.html"><img src="images/logo/logo_white.svg" alt="로고"></a>
       </h1>
+      <button class="mo-btn-sitemap">
+        <span class="blind">전체메뉴</span>
+      </button>
       <nav id="rockfish-gnb"> <!-- 헤더 gnb -->
         <ol class="rockfish-gnb">
           <li class="rf-depth1">
@@ -105,9 +117,6 @@
           <li><a href="#">WISH</a></li>
           <li><a href="#">CART</a></li>
           <li><a href="#">LOG-IN</a></li>
-          <button class="btn-sitemap">
-            <span class="blind">전체메뉴</span>
-          </button>
         </ul>
       </nav>
     </div>
@@ -202,6 +211,7 @@
   </div>
 
   <div id="rockfish-main">
+    <!-- 1번 메인 히어로 영역 -->
     <section class="main-section main-section-hero">
       <div class="hero-wrap">
         <h2 class="blind">히어로 영역</h2>
@@ -220,13 +230,13 @@
       </div>
     </section>
 
+    <!-- 2번 브랜드 소개 영역 -->
     <section class="main-section main-section-brand">
       <h2 class="blind">브랜드 소개</h2>
 
       <!-- background graphics -->
       <div class="brand-bg">
         <div class="bg-circle"></div>
-        <div class="bg-line"></div>
         <!-- 사선 -->
         <div class="bg-deg diag-1"></div>
         <div class="bg-deg diag-2"></div>
@@ -267,17 +277,18 @@
       </div>
     </section>
 
+    <!-- 3번 컬렉션 메뉴 -->
     <section class="main-section main-section-collection">
       <div class="wrap collection-wrap">
         <h2>26FW/SS Collection</h2>
         <div class="main-container collection-container">
           <div class="collection-container-wrap">
             <ul class="item-name">
-              <li>VELVET MARY</li>
-              <li>VELVET CROSS</li>
-              <li>SQUARE TOE</li>
-              <li>RAIN BOOTS</li>
-              <li>GLAIR STRAPPY SANDALS</li>
+              <li><a href="#">VELVET MARY</a></li>
+              <li><a href="#">VELVET CROSS</a></li>
+              <li><a href="#">SQUARE TOE</a></li>
+              <li><a href="#">RAIN BOOTS</a></li>
+              <li><a href="#">GLAIR STRAPPY SANDALS</a></li>
             </ul>
             <ul class="item-img">
               <li><img src="images/26sscollection/26fw-1.png" alt="벨벳메리"></li>
@@ -344,6 +355,5 @@
   </div>
   
   <footer id="rockfish-ft"></footer>
-  <div class="mo-gnd-sitemap"></div>  <!-- 모바일용 사이트맵 -->
 </body>
 </html>

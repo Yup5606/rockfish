@@ -11,28 +11,20 @@
 /* 2. tablet~ */
 @media screen and (min-width: 768px) {
   #rockfish-main {
-  padding-top: 69px;
+  padding-top: 0;
 }
   /* 브랜드 영역 */
-  .main-section-brand {
-    height: 105vh;
+  .brand-container{
+    gap: 120px;
   }
-
-  .brand-container {
-    position: relative;
+  .brand-title img{
+    max-width: 600px;
   }
-
-  .brand-logo img {
-    width: 240px;
+  .brand-intro{
+    width: 400px;
   }
-  .brand-intro-wrap {
-    position: absolute;
-    left: 50%;
-    width: 80%;
-    transform: translate(-50%, 30px);
-  }
-  .main-section-brand.active .brand-intro-wrap {
-    transform: translate(-50%, 0);
+  .brand-intro p{
+    font-size: 0.9em;
   }
 }
 
@@ -44,7 +36,7 @@
   #rockfish-main {
   padding-top: 0;
 }
-/* 히어로 영역 */
+  /* 히어로 영역 */
   .hero-video-mo {
     display: none;
   }
@@ -62,67 +54,39 @@
     object-position: center center;
   }
 
-/* 2. 브랜드 섹션 */
-  
-  /*  초기화 */
-  .main-section-brand .brand-logo,
-  .main-section-brand .brand-intro-wrap {
-    position: static;
-    transform: none;
-    opacity: 1;
+  /* 2. 브랜드 섹션 */
+      /* 백그라운드 도형 */
+  .circle-text{
+    width: 450px;
+    height: 450px;
   }
-  /* 재 정의 */
-  .main-section-brand {
-    height: 100vh;
+  .diag-1{
+    top: 10%;
   }
-  .brand-container {
-    display: flex;
+  .diag-2{
+    top: 80%;
+  }
+    /* 로고+멘트 */
+  .brand-container{
+    top: 30%;
+    flex-direction: row;
     align-items: center;
-    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 120px;
+    transition: 0.3s;
   }
-  .brand-logo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-left: 50px;
-    transition: 1s ease-out;
+  .brand-intro {
+    width: 900px;
+    padding-top: 50px;
   }
-  .brand-logo img {
-    opacity: 0.6;
-    transition: 1s ease-out;
-  }
-  .brand-intro-wrap {
-    flex: 1;
-    display: flex;
-    width: 50%;
-    text-align: center;
-    margin-right: 50px;
-    transition: 1s ease-out;
-  }
-  .brand-intro p {
-    font-size: 0.8em;
-    opacity: 0.7;
-    transition: 1s ease-out;
-  }
-
-/* ======= hover======== */
-  .brand-logo:hover {
-    scale: 1.1;
-  }
-  .brand-logo:hover img {
-    opacity: 1;
-  }
-
-  .brand-intro-wrap:hover {
-    scale: 1.1;
-  }
-  .brand-intro:hover p {
-    opacity: 1;
+  .brand-intro p{
+    font-size: 0.9em;
   }
 
 }
+
+
 
 /* 5. laptop~ 1921~ */
 @media screen and (min-width: 1921px) {}

@@ -11,11 +11,10 @@ const subMenu = ".rf-depth2-wrap";
 const btnLang = ".btn-lang";
 const langList = ".lang-list";
 const moGnb = ".mo-gnb-sitemap";
-const moOpen = ".btn-sitemap";
+const moOpen = ".mo-btn-sitemap";
 const moClose = ".mo-btn-close";
 const smMainMenu = ".mo-rf-depth1 > a";
 const smSubMenu = ".mo-rf-depth2";
-const blankAnchor = "a[href='#']"
 
 // 반응형 구현(뷰포트를 반응시킬때 구현시키는 먼저 실행 되어있어야함)
 rwd();
@@ -45,9 +44,13 @@ $(mainMenu).mouseleave(function(){
   // });
 
 // ======== 언어선택 구현 =========
-$(btnLang).mouseenter(function(){
-  $(this).next().stop().slideToggle(speed);
-})
+$(".lang-wrap").mouseenter(function(){
+  $(this).find(langList).stop().slideDown(speed);
+});
+
+$(".lang-wrap").mouseleave(function(){
+  $(this).find(langList).stop().slideUp(speed);
+});
 
 
 // ======== 모바일 GNB 닫기 =========
@@ -72,11 +75,6 @@ $(moClose).click(function(){
 //     $(this).next().stop().slideToggle(300);
 //   }
 // });
-
-// 임시링크 실행 막기
-$(blankAnchor).click(function(e){
-  e.preventDefault();
-});
 
 
 // 함수 선언 
@@ -107,6 +105,12 @@ rwd();
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+
+   // 임시링크 문서 꼭대기로 이동하는 것 막아주기
+  const blankAnchor = $("a[href='#']")
+  blankAnchor.click(function(e){
+    e.preventDefault();
+  });
 
 
 });

@@ -59,6 +59,7 @@
 
 /* 4. laptop~ 1280~ */
 @media screen and (min-width: 1280px) {
+  /* 전체값 */
   .wrap {
     padding: 0 24px;
   }
@@ -67,6 +68,7 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+  /* gnb */
   #rockfish-gnb {
     display: block;
   }
@@ -77,19 +79,19 @@
     transform: translateY(-50%);
   }
   .util-menu {
+    display: block;
     position: absolute;
     right: 24px;
     top: 50%;
     transform: translateY(-50%);
-    gap: 1em;
-  }
-  .btn-sitemap {
-    display: none;
   }
   .util-menu li {
     display: block;
   }
-  .mo-gnb-sitemap, #mo-rockfish-gnb {
+  .mo-btn-sitemap {
+    display: none;
+  }
+  #mo-rockfish-gnb, .mo-gnb-sitemap {
     display: none;
   }
 }
