@@ -4,18 +4,20 @@
 :root {
   --primary-font: 'PT Serif', 'Pretendard Variable', sans-serif;
   --secondary-font: 'Pretendard Variable', sans-serif;
-  --PTSerif-font: 'PT Serif','Nanum Myeongjo', serif;
+  --PTSerif-font: 'PT Serif', serif;
+  --BookkMyungjo-font: 'BookkMyungjo', serif;
+  --playfair-font: "Playfair Display", serif;
   --primary-color: #142A74;
   --secondary-color: #F2F4F7;
   --primary-font-color: #142A74;
   --secondary-font-color: rgb(242, 244, 247);
-  --gray-font-color: #B9B9B9;
+  --gray-font-color: #b9b9b9;
   --point-color:#F6DFEA;
   --google-icon: 'Material Symbols Outlined';
   --spacing-xs: 12px;
   --spacing-s: 24px;
   --spacing-m: 40px;
-  --spacing-l: 100px;
+  --spacing-l: 90px;
 }
 
 /* ============ 초기화 ============ */
@@ -39,7 +41,6 @@ ol, ul, li {
   list-style-type: none;
 }
 a {
-  color: #000;
   text-decoration: none;
 }
 img, video, iframe {
@@ -49,13 +50,16 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
-input, select, textarea, button {
+input, select, textarea{
   border: 0;
   font-size: 1em;
   background-color: transparent;
   font-family: var(--primary-font);
 }
 button {
+  border: 0;
+  font-size: 1em;
+  background-color: transparent;
   cursor: pointer;
 }
 
@@ -105,6 +109,7 @@ button {
 .hd-container {
   position: relative;
   display: flex;
+  height: 64px;
   justify-content: space-between;
   align-items: center;
   padding-top: 0.5em;
@@ -147,27 +152,16 @@ button {
   padding: 16px;
   background-color: var(--primary-color);
 }
-.rf-depth2-wrap:before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 99%;
-  height: 1px;
-  transform: translateX(-50%);
-  background-color: var(--secondary-color);
-  opacity: 0.5;
-}
 .rf-depth2-wrap:after {
   content: '';
   position: absolute;
   left: 50%;
-  bottom: 0;
+  top: 0;
   width: 100%;
   height: 1px;
   transform: translateX(-50%);
   background-color: var(--secondary-color);
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .rf-depth2 {
   display: flex;
@@ -178,7 +172,9 @@ button {
 .rf-depth2 li:hover {
   text-decoration: underline;
 }
-.rf-depth2 a {}
+.rf-depth2 a {
+  cursor: pointer;
+}
 
 /* ======= 유틸메뉴 (only pc) ======= */
 .util-menu{
@@ -195,7 +191,7 @@ button {
 .util-menu a:hover {
   text-decoration: underline;
 }
-    /* 언어 선택 영역 */
+/* 언어 선택 영역 */
 .lang-wrap {
   position: relative;
 }
@@ -225,15 +221,6 @@ button {
 .lang-list a {
   font-size: 0.9em;
 }
-
-
-/* 플렉스와 플롯 */
-/* overflow: auto; 
- / 플롯으로 가로 나열한 자식을 가진 부모영역에서는 얘가 자식을 알아서 찾음 높이 문제 해결! 
- / 클리어픽스 필요 없음
- / but 익스플로러 낮은 버전에선 활성화가 안됨 */
-
-/* 푸터 */
 
 /* ======== 모바일GNB, pc 사이트맵 ========= */
 
@@ -282,6 +269,7 @@ button {
 .mo-btn-sitemap{
   display:flex;
   align-items:center;
+  justify-content: center;
   width:60px;
   height:60px;
 }
@@ -392,8 +380,8 @@ button {
   color: var(--primary-color);
   opacity: 0.5;
 }
-/* 모바일 언어선택 버튼 */
 
+/* 모바일 언어선택 버튼 */
 .mo-lang-wrap {
   position: absolute;
   right: 24px;
@@ -411,4 +399,84 @@ button {
   display: flex;
   flex-direction: column;
 }
-.mo-lang-list li {}
+.mo-lang-list li {
+  display: none;
+}
+
+/* 푸터 */
+#rockfish-ft {
+  position: relative;
+  width: 100%;
+  padding: 80px 20px 60px;
+  color: #fff;
+  background: var(--primary-color);
+  overflow: hidden;
+}
+.ft-wrap {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.ft-left {}
+.ft-sns {
+  position: absolute;
+  top: -35px;
+}
+.ft-insta-icon {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+  opacity: 0.8;
+}
+.ft-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ft-info p {
+  width: 100%;
+  min-width: 200px;
+  font-family: var(--secondary-font);
+  font-size: 0.8em;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+.ft-right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: right;
+}
+.ft-right li a {
+  font-size: 1.2em;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+.ft-right li a:hover {
+  opacity: 1;
+}
+.ft-bottom-logo {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+}
+.ft-bottom-logo img {
+  width: 100%;
+  opacity: 0.3;
+}
+.logo-text {
+  font-family: var(--playfair-font);
+  font-size: 140px;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+.logo-sub {
+  font-size: 120px;
+}

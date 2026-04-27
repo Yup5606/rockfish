@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rockfish weatherwear</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/common_rwd.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/main_rwd.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/lenis.min.js"></script>
@@ -20,10 +22,10 @@
 
   <!-- 1. 바로가기 메뉴 -->
   <div id="cv-skip">
-      <a href="#cv-main">본문 바로가기</a>
-      <a href="#cv-gnb">주 메뉴 바로가기</a>
-      <a href="#cv-lnb">서브 메뉴 바로가기</a>
-      <a href="#cv-ft">하단 정보 바로가기</a>
+      <a class="blind" href="#cv-main">본문 바로가기</a>
+      <a class="blind" href="#cv-gnb">주 메뉴 바로가기</a>
+      <a class="blind" href="#cv-lnb">서브 메뉴 바로가기</a>
+      <a class="blind" href="#cv-ft">하단 정보 바로가기</a>
   </div>
 
   <header id="rockfish-hd" class="second">
@@ -94,7 +96,6 @@
               <ul class="rf-depth2">
               <li><a href="#">Company</a></li>
               <li><a href="#">History</a></li>
-              <li><a href="#">ESG</a></li>
               <li><a href="#">Career</a></li>
               </ul>
             </div>
@@ -122,7 +123,7 @@
     </div>
   </header>
 
-  <!-- 모바일용 헤더 gnb -->
+  <!-- 모바일 사이트맵 -->
   <div class="mo-gnb-sitemap">
     <div class="mo-gnb-top">
       <div class="mo-search-wrap">
@@ -144,7 +145,7 @@
     <nav id="mo-rockfish-gnb">
       <ol class="mo-rockfish-gnb">
         <li class="mo-rf-depth1">
-          <a href="http://www.naver.com">Shop</a>
+          <a href="#">Shop</a>
           <ul class="mo-rf-depth2">
             <li><a href="#">New</a></li>
             <li><a href="#">Exclusive</a></li>
@@ -158,7 +159,7 @@
           </ul>
         </li>
         <li class="mo-rf-depth1">
-          <a href="http://www.google.com">Editorial</a>
+          <a href="#">Editorial</a>
           <ul class="mo-rf-depth2">
             <li><a href="#">ALL SEASON</a></li>
             <li><a href="#">26SS</a></li>
@@ -192,7 +193,6 @@
           <ul class="mo-rf-depth2">
             <li><a href="#">Company</a></li>
             <li><a href="#">History</a></li>
-            <li><a href="#">ESG</a></li>
             <li><a href="#">Career</a></li>
           </ul>
         </li>
@@ -218,15 +218,25 @@
         <!-- 모바일영상 -->
         <div class="main-container hero-container hero-container-mo">
           <video class="hero-video hero-video-mo" autoplay muted loop playsinline>
-            <source src="images/header/export/header_lode_mo.mp4" type="video/mp4">
+            <source src="./images/header/header_lode_mo.mp4" type="video/mp4">
           </video>
         </div>
         <!-- 테블릿,pc영상 -->
         <div class="main-container hero-container">
           <video class="hero-video hero-video-pc" autoplay muted loop playsinline>
-            <source src="images/header/export/header_lode_pc_1.mp4" type="video/mp4">
+            <source src="./images/header/header_lode_pc.mp4" type="video/mp4">
           </video>
         </div>
+
+        <!-- 히어로 코멘트 -->
+        <div class="v-txt">
+          <p class="title-ko">일상을 특별하게</p>
+          <p class="title-en">Moments Made Special</p>
+          <p class="hero-sub">
+            락피쉬웨더웨어와 함께하는 매 순간,<br>자연과 조화를 이루는 특별한 하루를 경험하세요.
+          </p>
+        </div>
+        
       </div>
     </section>
 
@@ -271,34 +281,36 @@
           <img src="images/logo/logo_white.svg" alt="로고">
         </div>       
         <div class="brand-intro">
-          <p>락피쉬웨더웨어는 햇살과 소나기를 모두 즐길 수 있도록 당신의 모든 계절과 함께 합니다.</p>
-          <p>파도가 부서지고 넓은 들판이 펼쳐진 콘월의 자연에서 탄생한 우리는 비가 오는 날이나 맑은 날이나 언제든 당신이 매일을 즐길 수 있도록 영감을 주는 제품을 만듭니다.</p>
+          <p>락피쉬웨더웨어는 햇살과 소나기, 사계절의 모든 순간을 함께합니다. 자연에서 영감을 받은 디자인으로 하루를 편안하고 특별하게 만들어 줍니다.</p>
+          <p>비 오는 날에도, 맑은 날에도 즐길 수 있는 세련되고 실용적인 제품은 계절의 변화를 느끼며 일상을 더욱 풍요롭게 합니다.</p>
+          <p>매 순간 자연과 함께하는 경험을 선사하며, 사계절 내내 당신의 라이프스타일을 한층 특별하게 만들어주는 브랜드입니다.</p>
         </div>     
       </div>
     </section>
 
     <!-- 3번 컬렉션 메뉴 -->
     <section class="main-section main-section-collection">
+      <!-- 컬렉션 메인 메뉴 -->
       <div class="wrap collection-wrap">
         <h2>26FW/SS Collection</h2>
         <div class="main-container collection-container">
           <div class="collection-container-wrap">
             <ul class="item-name">
-              <li><a href="#">VELVET MARY</a></li>
+              <li class="active"><a href="#">VELVET MARY</a></li>
               <li><a href="#">VELVET CROSS</a></li>
               <li><a href="#">SQUARE TOE</a></li>
               <li><a href="#">RAIN BOOTS</a></li>
               <li><a href="#">GLAIR STRAPPY SANDALS</a></li>
             </ul>
             <ul class="item-img">
-              <li><img src="images/26sscollection/26fw-1.png" alt="벨벳메리"></li>
+              <li class="active"><img src="images/26sscollection/26fw-1.png" alt="벨벳메리"></li>
               <li><img src="images/26sscollection/26fw-2.png" alt="벨벳크로스"></li>
               <li><img src="images/26sscollection/26fw-3.png" alt="스퀘어토"></li>
               <li><img src="images/26sscollection/26ss-4.png" alt="레인부츠"></li>
               <li><img src="images/26sscollection/26ss-5.png" alt="글리터샌들"></li>
             </ul>
             <div class="item-desc-group">
-              <div class="desc-box desc-box1">
+              <div class="desc-box desc-box1 active">
                 <h3>BELLA QUILTED MARYJANES - LAVENDER</h3>
                 <p>은은한 광택감의 벨벳 소재와 컬러 배색 인솔이 돋보이는 시그니처 메리제인입니다. 히든 밴딩 스트랩으로 간편하게 착화할 수 있으며, 퀼팅 인솔을 적용해 편안한 쿠션감을 제공합니다.</p>
               </div>
@@ -313,11 +325,11 @@
               </div>
               <div class="desc-box desc-box4">
                 <h3>FLATFORM LACEUP RAIN BOOTS MIDDLE - CREAM</h3>
-                <p>플랫폼 아웃솔에 레이스업 디테일로 스타일리시한 무드가 느껴지는 레이스업 미들 레인부츠입니다. 천연고무 소재를 사용한 러버 소재로 탄성과 내구성이 뛰어나며, 논슬립 기능의 아웃솔로 안정적인 착화감을 제공합니다. 샌딩 처리된 매트 텍스처와 가벼운 무게감으로 다양한 스타일에 매치할 수 있습니다.</p>
+                <p>매트 텍스처와 레이스업 디테일이 어우러진 미들 레인부츠입니다. 플랫폼 아웃솔과 천연고무 러버 소재로 안정감과 내구성을 높였으며, 논슬립 아웃솔로 편안한 착화감을 제공합니다.</p>
               </div>
               <div class="desc-box desc-box5">
                 <h3>GLAIR STRAPPY SANDALS - SILVER</h3>
-                <p>페미닌한 무드의 슬림한 다중 스트랩 디자인이 매력적인 스트래피 샌들입니다. 솔리드 컬러와 글리터 두 가지 버전으로 다양한 룩에 매치하기 좋습니다. 젤리 소재와 이중 쿠션 인솔로 편안한 착화감을 제공합니다. 바닥의 ROCKFISH WEATHERWEAR 로고는 글레어 라인만을 위해 정교하게 새겨진 디테일로, 브랜드 오리지널리티를 담았습니다.
+                <p>페미닌한 슬림 다중 스트랩 디자인의 스트래피 샌들입니다. 솔리드와 글리터 두 가지 버전으로 다양한 룩에 매치하기 좋으며, 젤리 소재와 이중 쿠션 인솔로 편안하게 착용할 수 있습니다. 바닥의 ROCKFISH WEATHERWEAR 로고 디테일로, 브랜드 오리지널리티를 담았습니다.
                 </p>
               </div>
               <div class="btn-more">
@@ -329,31 +341,458 @@
           </div>
         </div>
       </div>
+      <!-- 컬렉션 제품 메뉴 -->
+      <div class="wrap collection-item-wrap">
+        <ul class="collection-card-list">
+          <li class="card-item card-item1">
+            <div class="card-inner">
+              <div class="card-img">
+                <img src="images/26sscollection/26fw-1.png" alt="벨벳메리제인 라벤더">
+              </div>
+              <div class="card-info">
+                <p class="card-name">BELLA QUILTED MARYJANES - LAVENDER</p>
+                <p class="card-price">₩148,000</p>
+              </div>
+              <button class="card-like">
+                <i class= "fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </li>
+          <li class="card-item card-item2">
+            <div class="card-inner">
+              <div class="card-img">
+                <img src="images/26sscollection/26fw-2.png" alt="벨벳메리제인 라벤더">
+              </div>
+              <div class="card-info">
+                <p class="card-name">BELLA CROSS BANDING FLATS(PEBBLE SOLE) - BROWN</p>
+                <p class="card-price">₩148,000</p>
+              </div>
+              <button class="card-like">
+                <i class= "fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </li>
+          <li class="card-item card-item3">
+            <div class="card-inner">
+              <div class="card-img">
+                <img src="images/26sscollection/26fw-3.png" alt="벨벳메리제인 라벤더">
+              </div>
+              <div class="card-info">
+                <p class="card-name">SQUARE TOE TWO STRAP MARYJANES(4CM) - PINK</p>
+                <p class="card-price">₩148,000</p>
+              </div>
+              <button class="card-like">
+                <i class= "fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </li>
+          <li class="card-item card-item4">
+            <div class="card-inner">
+              <div class="card-img">
+                <img src="images/26sscollection/26ss-4.png" alt="벨벳메리제인 라벤더">
+              </div>
+              <div class="card-info">
+                <p class="card-name">FLATFORM LACEUP RAIN BOOTS MIDDLE - CREAM</p>
+                <p class="card-price">₩148,000</p>
+              </div>
+              <button class="card-like">
+                <i class= "fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </li>
+          <li class="card-item card-item5">
+            <div class="card-inner">
+              <div class="card-img">
+                <img src="images/26sscollection/26ss-5.png" alt="벨벳메리제인 라벤더">
+              </div>
+              <div class="card-info">
+                <p class="card-name">GLAIR STRAPPY SANDALS - SILVER</p>
+                <p class="card-price">₩148,000</p>
+              </div>
+              <button class="card-like">
+                <i class= "fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
+    <!-- 4번 추천 스타일 메뉴 -->
     <section class="main-section main-section-recommend">
       <div class="wrap recommend-wrap">
         <h2>Recommended Style</h2>
-        <div class="main-container recommend-container"></div>
+        <div class="main-container recommend-container">
+
+          <!-- 1번 사진 -->
+          <div class="recommend-slider">
+            <div class="recommend-slide is-active is-first" data-index="1">
+              <div class="visual-area">
+                <img src="./images/recommend/recommend_img/recommend_1.jpg" alt="1번 추천 제품 이미지">
+                <button class="arrow arrow-prev">
+                  <span class="blind">이전 제품 보기</span>
+                </button>
+                <button class="arrow arrow-next">
+                  <span class="blind">다음 제품 보기</span>
+                </button>
+                <div class="pin-btn-group">
+                  <button class="pin-btn pin-1 active">
+                    <span class="blind">제품 1번 보기</span>
+                  </button>
+                  <button class="pin-btn pin-2">
+                    <span class="blind">제품 2번 보기</span>
+                  </button>
+                </div>
+
+                <div class="info-content info-1 active">
+                  <img src="./images/recommend/recommend_item/recommed_item1-1.png" alt="1번 추천 제품 사진" class="prod-img">
+                  <div class="recommend-desc">
+                    <h3 class="recommend-item-name">PUFFIN RIBBON BANDING SNEAKERS</h3>
+                    <p class="recommend-item-color">DARK SILVER</p>
+                  </div>
+                  <button>
+                    <a class="recommend-btn">View More</a>
+                  </button>
+                </div>
+                <div class="info-content info-2">
+                  <img src="./images/recommend/recommend_item/recommed_item1-2.png" alt="2번 추천 제품 사진" class="prod-img">
+                  <div class="recommend-desc">
+                    <h3 class="recommend-item-name">PUFFIN RIBBON BANDING SNEAKERS</h3>
+                    <p class="recommend-item-color">CREAM</p>
+                  </div>
+                  <button>
+                    <a class="recommend-btn">View More</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2번 사진 -->
+          <div class="recommend-slider">
+            <div class="recommend-slide is-active is-first" data-index="1">
+              <div class="visual-area">
+                <img src="./images/recommend/recommend_img/recommend_2.jpg" alt="1번 추천 제품 이미지">
+                <button class="arrow arrow-prev">
+                  <span class="blind">이전 제품 보기</span>
+                </button>
+                <button class="arrow arrow-next">
+                  <span class="blind">다음 제품 보기</span>
+                </button>
+                <div class="pin-btn-group">
+                  <button class="pin-btn pin-1 active">
+                    <span class="blind">제품 1번 보기</span>
+                  </button>
+                  <button class="pin-btn pin-2">
+                    <span class="blind">제품 2번 보기</span>
+                  </button>
+                </div>
+
+                <div class="info-content info-1 active">
+                  <img src="./images/recommend/recommend_item/recommed_item2-2.png" alt="1번 추천 제품 사진" class="prod-img">
+                  <div class="recommend-desc">
+                    <h3 class="recommend-item-name">BLISS SLIP-ON SNEAKERS</h3>
+                    <p class="recommend-item-color">DARK SILVER</p>
+                  </div>
+                  <button>
+                    <a class="recommend-btn">View More</a>
+                  </button>
+                </div>
+                <div class="info-content info-1">
+                  <img src="./images/recommend/recommend_item/recommed_item2-1.png" alt="2번 추천 제품 사진" class="prod-img">
+                  <div class="recommend-desc">
+                    <h3 class="recommend-item-name">BLISS SLIP-ON SNEAKERS</h3>
+                    <p class="recommend-item-color">BEIGE</p>
+                  </div>
+                  <button>
+                    <a class="recommend-btn">View More</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 3번 사진 -->
+          <div class="recommend-slider">
+            <div class="recommend-slide is-active is-first" data-index="1">
+              <div class="visual-area">
+                <img src="./images/recommend/recommend_img/recommend_3.jpg" alt="1번 추천 제품 이미지">
+                <button class="arrow arrow-prev">
+                  <span class="blind">이전 제품 보기</span>
+                </button>
+                <button class="arrow arrow-next">
+                  <span class="blind">다음 제품 보기</span>
+                </button>
+                <div class="pin-btn-group">
+                  <button class="pin-btn pin-1 active">
+                    <span class="blind">제품 1번 보기</span>
+                  </button>
+                </div>
+
+                <div class="info-content info-1 active">
+                  <img src="./images/recommend/recommend_item/recommed_item3-1.png" alt="1번 추천 제품 사진" class="prod-img">
+                  <div class="recommend-desc">
+                    <h3 class="recommend-item-name">GLAIR STRAPPY SANDALS</h3>
+                    <p class="recommend-item-color">GREEN</p>
+                  </div>
+                  <button>
+                    <a class="recommend-btn">View More</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 4번 사진 -->
+          <div class="recommend-slider">
+            <div class="recommend-slide is-active is-first" data-index="4">
+              <div class="visual-area">
+                <img src="./images/recommend/recommend_img/recommend_4.jpg" alt="1번 추천 제품 이미지">
+                <button class="arrow arrow-prev">
+                  <span class="blind">이전 제품 보기</span>
+                </button>
+                <button class="arrow arrow-next">
+                  <span class="blind">다음 제품 보기</span>
+                </button>
+                <div class="pin-btn-group">
+                  <button class="pin-btn pin-1 active">
+                    <span class="blind">제품 1번 보기</span>
+                  </button>
+                  <button class="pin-btn pin-2">
+                    <span class="blind">제품 2번 보기</span>
+                  </button>
+                </div>
+
+                <div class="info-content info-1 active">
+                  <img src="./images/recommend/recommend_item/recommed_item4-1.png" alt="1번 추천 제품 사진" class="prod-img">
+                  <div class="recommend-desc">
+                    <h3 class="recommend-item-name">FLATFORM WEAVING RAIN BOOTS</h3>
+                    <p class="recommend-item-color">KAHKI</p>
+                  </div>
+                  <button>
+                    <a class="recommend-btn">View More</a>
+                  </button>
+                </div>
+              
+                <div class="info-content info-2">
+                  <img src="./images/recommend/recommend_item/recommed_item4-2.png" alt="1번 추천 제품 사진" class="prod-img">
+                  <div class="recommend-desc">
+                    <h3 class="recommend-item-name">FLATFORM WEAVING RAIN BOOTS</h3>
+                    <p class="recommend-item-color">BLACK</p>
+                  </div>
+                  <button>
+                    <a class="recommend-btn">View More</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- 5번 사진 -->
+          <div class="recommend-slider">
+            <div class="recommend-slide is-active is-first" data-index="5">
+              <div class="visual-area">
+                <img src="./images/recommend/recommend_img/recommend_5.jpg" alt="1번 추천 제품 이미지">
+                <button class="arrow arrow-prev">
+                  <span class="blind">이전 제품 보기</span>
+                </button>
+                <button class="arrow arrow-next">
+                  <span class="blind">다음 제품 보기</span>
+                </button>
+                <div class="pin-btn-group">
+                  <button class="pin-btn pin-1 active">
+                    <span class="blind">제품 1번 보기</span>
+                  </button>
+                </div>
+
+                <div class="info-content info-1 active">
+                  <img src="./images/recommend/recommend_item/recommed_item5-1.png" alt="1번 추천 제품 사진" class="prod-img">
+                  <div class="recommend-desc">
+                    <h3 class="recommend-item-name">BELLA QUILTED MARYJANES</h3>
+                    <p class="recommend-item-color">DARK BROWN</p>
+                  </div>
+                  <button>
+                    <a class="recommend-btn">View More</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
       </div>
     </section> 
 
+    <!-- 5번 스토어 위치 메뉴 -->
     <section class="main-section main-section-store"> 
-      <div class="store-wrap">
+      <div class="store-bg"><img src="./images/backgroundimg/main_store_bg.jpg" alt="스토어배경이미지"></div>
+      <div class="wrap store-wrap">
         <h2>Store</h2>
-        <div class="main-container store-container"></div>
+        <div class="main-container store-container">
+          <ul class="store-list">
+            <li class="active">Seong-su</li>
+            <li>Myeong-dong</li>
+            <li>Do-san</li>
+            <li>Tokyo</li>
+            <li>Beijing</li>
+            <li>Taipei</li>
+          </ul>
+          <div class="store-content">
+            <div class="swiper store-swiper">
+              <div class="swiper-wrapper">
+
+                <!-- 1번 카드 -->
+                 <div class="swiper-slide">
+                  <div class="store-box-wrap">
+                    <h3 class="store-name">Seongsu Flagship Store</h3>
+                    <figure class="store-img">
+                      <img src="./images/store_/sungsu_1.jpg" alt="성수 스토어">
+                    </figure>
+                    <div class="store-add-wrap">
+                      <p>Seoul</p>
+                      <p>OPEN HOURS 11:30 - 22:00</p>
+                      <p>TEL 02-3215-4875</p>
+                    </div>
+                  </div>
+                 </div>
+
+                 <!-- 2번 카드 -->
+                 <div class="swiper-slide">
+                  <div class="store-box-wrap">
+                    <h3 class="store-name">Myengdong Flagship Store</h3>
+                    <figure class="store-img">
+                      <img src="./images/store_/myengdong_1.jpg" alt="명동 스토어">
+                    </figure>
+                    <div class="store-add-wrap">
+                      <p>Myeong-dong</p>
+                      <p>OPEN HOURS 11:00 - 22:00</p>
+                      <p>TEL 02-3215-4875</p>
+                    </div>
+                  </div>
+                 </div>
+
+                  <!-- 3번 카드 -->
+                 <div class="swiper-slide">
+                  <div class="store-box-wrap">
+                    <h3 class="store-name">Do-San Flagship Store</h3>
+                    <figure class="store-img">
+                      <img src="./images/store_/dosan_1.jpg" alt="도산 스토어">
+                    </figure>
+                    <div class="store-add-wrap">
+                      <p>Do-San</p>
+                      <p>OPEN HOURS 11:00 - 22:00</p>
+                      <p>TEL 02-3215-4875</p>
+                    </div>
+                  </div>
+                 </div>
+
+                  <!-- 4번 카드 -->
+                 <div class="swiper-slide">
+                  <div class="store-box-wrap">
+                    <h3 class="store-name">Tokyo Flagship Store</h3>
+                    <figure class="store-img">
+                      <img src="./images/store_/hannam_1.jpg" alt="도쿄 스토어">
+                    </figure>
+                    <div class="store-add-wrap">
+                      <p>Tokyo</p>
+                      <p>OPEN HOURS 11:00 - 22:00</p>
+                      <p>TEL 02-3215-4875</p>
+                    </div>
+                  </div>
+                 </div>
+
+                  <!-- 5번 카드 -->
+                 <div class="swiper-slide">
+                  <div class="store-box-wrap">
+                    <h3 class="store-name">Beijing Store</h3>
+                    <figure class="store-img">
+                      <img src="./images/store_/beijing_1.jpg" alt="베이징 스토어">
+                    </figure>
+                    <div class="store-add-wrap">
+                      <p>Beijing</p>
+                      <p>OPEN HOURS 11:00 - 22:00</p>
+                      <p>TEL 02-3215-4875</p>
+                    </div>
+                  </div>
+                 </div>
+
+                  <!-- 6번 카드 -->
+                 <div class="swiper-slide">
+                  <div class="store-box-wrap">
+                    <h3 class="store-name">Taypei Flagship Store</h3>
+                    <figure class="store-img">
+                      <img src="./images/store_/taypei_1.jpg" alt="타이페이 스토어">
+                    </figure>
+                    <div class="store-add-wrap">
+                      <p>Taypei</p>
+                      <p>OPEN HOURS 14:00 - 20:00</p>
+                      <p>TEL 02-3215-4875</p>
+                    </div>
+                  </div>
+                 </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- 6번 후기 메뉴 -->
     <section class="main-section main-section-realmoments">
-      <div class="wrap realmoments-wrap">
+      <div class="realmoments-wrap">
         <h2>Real Moments</h2>
-        <div class="main-container realmoments-container"></div>
+        <div class="main-container realmoments-container">
+          <div class="realmoments-track">
+          </div>
+        </div>
       </div>
     </section>   
 
+  <!-- 메인 섹션 종료 -->
   </div>
   
-  <footer id="rockfish-ft"></footer>
+  <!-- 7번 푸터 -->
+  <footer id="rockfish-ft">
+    <div class="ft-wrap">
+    
+      <!-- 좌측 정보 -->
+      <div class="ft-left">
+        <div class="ft-sns">
+          <svg class="ft-insta-icon" viewBox="0 0 24 24">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.8a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+          </svg>
+        </div>
+      
+        <div class="ft-info">
+          <p>주식회사 에이유브랜즈 | 락피쉬웨더웨어</p>
+          <p>C. Kim Jihun</p>
+          <p>04782 68, Achasan-ro, Seongdong-gu, Seoul 4F</p>
+          <p>AU BRANDZ CO., LTD. I B. 578-81-02548</p>
+          <p>© RockfishWeatherwear.</p>
+          <p>O.제 2022-서울성동-00329 호</p>
+        </div>
+      </div>
+    
+      <!-- 우측 메뉴 -->
+      <div class="ft-right">
+        <ul>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Editorial</a></li>
+          <li><a href="#">More</a></li>
+          <li><a href="#">Clor</a></li>
+          <li><a href="#">26SS Collection</a></li>
+        </ul>
+      </div>
+    
+    </div>
+  
+    <!-- 큰 텍스트 -->
+    <div class="ft-bottom-logo">
+      <img src="images/logo/logo_wide.svg" alt="인스타그램">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

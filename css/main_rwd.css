@@ -11,9 +11,21 @@
 /* 2. tablet~ */
 @media screen and (min-width: 768px) {
   #rockfish-main {
-  padding-top: 0;
-}
-  /* 브랜드 영역 */
+    padding-top: 0;
+  }
+  /* 1. 히어로 영역 */
+  .title-ko {
+    top: 21%;
+  }
+  .title-en {
+    font-size: 48px;
+  }
+  .hero-sub {
+    width: 500px;
+    font-size: 21px;
+  }
+
+  /* 2. 브랜드 영역 */
   .brand-container{
     gap: 120px;
   }
@@ -26,6 +38,121 @@
   .brand-intro p{
     font-size: 0.9em;
   }
+  /* 3. 컬렉션 영역 */
+  .collection-wrap {
+    height: 830px;
+  }
+  .collection-container {
+    min-height: 1000px;
+  }
+  .collection-item-wrap {
+    padding: 24px;
+  }
+  .item-img {
+    width: 100%;
+    max-width: 600px;
+  }
+  .item-img li {
+    margin-top: 0;
+  }
+  .item-desc-group {
+    bottom: 25%;
+  }
+  .desc-box {
+    width: 420px;
+    bottom: -20px;
+  }
+  .desc-box h3 {
+    font-size: 1.3em;
+  }
+  .desc-box p {
+    font-size: 1em;
+  }
+  .btn-more {
+    top: 35px;
+  }
+  .btn-view-more {
+    font-size: 18px;
+  }
+  .collection-item-wrap {
+    margin-top: 30px;
+  }
+  .card-item {
+    flex: 0 0 calc(26.25% - 8px);
+  }
+  .card-like {
+    bottom: 28%;
+    right: 10%;
+  }
+  .card-like i{
+    font-size: 14px;
+  }
+
+  /* 4. 추천 스타일 섹션 */
+  .recommend-container {
+    padding: 0 20px;
+    height: 600px;
+  }
+  .recommend-slide {
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 350px;
+  }
+  .info-content {
+    position: absolute;
+    top: 50%;
+    left: 150%;
+    transform: translate(-50%, 0);
+    flex-direction: column;
+    background-color: transparent;
+  }
+  .info-content .prod-img {
+    width: 70%;
+  }
+  .recommend-desc {
+    width: 70%;
+    text-align: center;
+  }
+  .recommend-item-name {
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5em;
+  }
+  .recommend-item-color {
+    font-size: 0.8em;
+    margin-top: 10px;
+  }
+  .recommend-btn {
+    display: block;
+    font-size: 0.7em;
+    padding: 10px 16px;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+    z-index: 9999;
+  }
+  .recommend-slider:nth-of-type(1) .info-1,
+  .recommend-slider:nth-of-type(1) .info-2,
+  .recommend-slider:nth-of-type(2) .info-1, 
+  .recommend-slider:nth-of-type(3) .info-1,
+  .recommend-slider:nth-of-type(4) .info-1,
+  .recommend-slider:nth-of-type(4) .info-2,
+  .recommend-slider:nth-of-type(5) .info-1 {
+    top: 15%;
+  }
+}
+
+/* 3-1. max tb */
+@media screen and (min-width: 840px) {
+  /* 3. 컬렉션 영역 */
+  .card-like {
+    bottom: 70px;
+    right: 8%;
+  }
+  .card-like i{
+    font-size: 16px;
+  }
 }
 
 /* 3. only tb */
@@ -33,29 +160,41 @@
 
 /* 4. laptop~ 1280~ */
 @media screen and (min-width: 1280px) {
+  .wrap {
+    padding: 0 var(--spacing-l);
+  }
   #rockfish-main {
   padding-top: 0;
 }
-  /* 히어로 영역 */
+  /* 1. 히어로 영역 */
   .hero-video-mo {
     display: none;
   }
-
+  .title-ko {
+    top: 20%;
+    right: 2%;
+    font-size: 62px;
+  }
+  .title-en {
+    left: 3%;
+    font-size: 57px;
+  }
+  .hero-sub {
+    left: 3%;
+    width: 600px;
+    font-size: 26px;
+  }
   .hero-video-pc {
     display: block;
-    top: 0;
+    top: 50%;
     left: 50%;
-    width: 100%;
-    max-width: 1920px;
+    width: auto;
     height: 100%;
-    max-height: 1080px;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     object-fit: cover;
-    object-position: center center;
   }
-
   /* 2. 브랜드 섹션 */
-      /* 백그라운드 도형 */
+  /* 백그라운드 도형 */
   .circle-text{
     width: 450px;
     height: 450px;
@@ -66,7 +205,7 @@
   .diag-2{
     top: 80%;
   }
-    /* 로고+멘트 */
+  /* 로고+멘트 */
   .brand-container{
     top: 30%;
     flex-direction: row;
@@ -76,13 +215,183 @@
     gap: 120px;
     transition: 0.3s;
   }
+  .brand-title h3{
+    width: 100%;
+  }
+  .brand-title img{
+    width: 100%;
+  }
   .brand-intro {
     width: 900px;
     padding-top: 50px;
   }
   .brand-intro p{
-    font-size: 0.9em;
+    font-size: 1em;
   }
+  /* 3. 컬렉션 섹션 */
+  .collection-item-wrap {
+    margin-top: 80px;
+  }
+  .collection-card-list {
+    gap: 18px;
+  }
+  .item-img {
+    min-width: 800px;
+  }
+  .desc-box {
+    width: 480px;
+  }
+  .desc-box h3 {
+    font-size: 1.5em;
+  }
+  .desc-box p {
+    font-size: 1.1em;
+  }
+  .btn-more {
+    padding-top: 20px;
+  }
+  .btn-view-more {
+    font-size: 21px;
+  }
+  .card-item {
+    flex: 1;
+  }
+  .card-info {
+    font-size: 14px;
+  }
+  .card-like {
+    bottom: 90px;
+    right: 10%;
+  }
+  .card-like i{
+    font-size: 18px;
+  }
+
+  /* 4. 추천 스타일 섹션 */
+  .recommend-container {
+    height: 700px;
+  }
+  .recommend-slide {
+    top: 50%;
+    left: 15%;
+    transform: translate(20%, -60%);
+    max-width: 450px;
+  }
+  .visual-area {
+    position: relative;
+  }
+  .info-content {
+    position: absolute;
+    top: 50%;
+    left: 170%;
+    transform: translate(-30%, 0);
+    width: 450px;
+    flex-direction: column;
+    background-color: transparent;
+  }
+  .info-content .prod-img {
+    width: 70%;
+  }
+  .recommend-desc {
+    width: 90%;
+    text-align: center;
+  }
+  .recommend-item-name {
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.5em;
+  }
+  .recommend-item-color {
+    font-size: 1.3em;
+    margin-top: 10px;
+  }
+  .recommend-btn {
+    display: block;
+    font-size: 1em;
+    padding: 13px 20px;
+    margin-top: 50px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+    z-index: 9999;
+  }
+  .recommend-slider:nth-of-type(1) .info-1,
+  .recommend-slider:nth-of-type(1) .info-2,
+  .recommend-slider:nth-of-type(2) .info-1, 
+  .recommend-slider:nth-of-type(3) .info-1,
+  .recommend-slider:nth-of-type(4) .info-1,
+  .recommend-slider:nth-of-type(4) .info-2,
+  .recommend-slider:nth-of-type(5) .info-1 {
+    top: 15%;
+  }
+  .arrow {
+    width: 60px;
+    height: 60px;
+  }
+  .arrow-prev, .arrow-next {
+    background-size: 21px;
+  }
+  .pin-btn {
+    width: 45px;
+    height: 45px;
+  }
+  .pin-btn:after {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  /* 5번 스토어 영역 */
+  .store-container {
+    margin-left: 0;
+  }
+  .store-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 180px;
+  }
+  .store-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+  }
+  .store-list li {
+    display: inline-block;
+    padding: 3px 7px;
+    font-size: 1.5em;
+  }
+  .store-list li.active {
+    font-weight: 600;
+  }
+  .store-name {
+    font-size: 1.5em;
+  }
+  .store-add-wrap {
+    font-size: 1em;
+  }
+  .store-add-wrap p:nth-child(1) {
+    font-size: 1.3em;
+  }
+  /* 6. 고객 후기 영역 */
+  .realmoments-wrap {
+    margin: 80px 0;
+  }
+  .realmoments-wrap h2 {
+    padding: 0 var(--spacing-l);
+  }
+  .realmoments-container {
+    margin-top: 40px;
+  }
+  .realmoment-item {
+    border-radius: 18px;
+  }
+  .small { width: 300px; height: 400px; }
+  .large { width: 300px; height: 190px; }
+  .medium { width: 430px; height: 600px; }
+
+  
 
 }
 

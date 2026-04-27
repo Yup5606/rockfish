@@ -7,9 +7,7 @@
 /* 2. tablet~ */
 @media screen and (min-width: 768px) {
   .hd-container {
-    justify-content: space-between;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    height: 72px;
   }
   .mo-gnb-sitemap {
     width: calc(100% - 100px);
@@ -46,6 +44,24 @@
   .mo-rf-depth1 > a:before {
     content: '';
   }
+
+  /* 푸터 */
+  #rockfish-ft {
+    padding: 120px 20px;
+  }
+  .ft-info {
+    gap: 8px;
+  }
+  .ft-info p {
+    font-size: 0.9em;
+  }
+  .ft-right li a {
+    font-size: 1.3em;
+  }
+  .ft-bottom-logo {
+    bottom: -30px;
+  }
+
 }
 
 /* 3. only tb */
@@ -93,6 +109,36 @@
   }
   #mo-rockfish-gnb, .mo-gnb-sitemap {
     display: none;
+  }
+
+  /* 푸터 */
+  #rockfish-ft {
+    padding: 120px 50px 200px;
+  }
+  .ft-wrap {
+    max-width: 1900px;
+  }
+  .ft-sns {
+    top: -50px;
+  }
+  .ft-insta-icon {
+    width: 32px;
+    height: 32px
+  }
+  .ft-info {
+    gap: 10px;
+  }
+  .ft-info p {
+    font-size: 1em;
+  }
+  .ft-right ul {
+    gap: 20px;
+  }
+  .ft-right li a {
+    font-size: 1.5em;
+  }
+  .ft-bottom-logo {
+    bottom: -90px;
   }
 }
 

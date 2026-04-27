@@ -105,12 +105,26 @@ rwd();
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+  // 상태 감지 함수
+  function checkFixed() {
+    if (document.body.classList.contains('fixed')) {
+      lenis.stop();   // 스크롤 완전 정지
+    } else {
+      lenis.start();  // 다시 활성화
+    }
+  }
+  // 클래스 변경 시 실행
+  const observer = new MutationObserver(checkFixed);
+
+  observer.observe(document.body, {
+    attributes: true,
+    attributeFilter: ['class']
+  });
+
 
    // 임시링크 문서 꼭대기로 이동하는 것 막아주기
   const blankAnchor = $("a[href='#']")
   blankAnchor.click(function(e){
     e.preventDefault();
   });
-
-
 });
