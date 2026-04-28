@@ -285,7 +285,6 @@
     top: 50%;
     left: 170%;
     transform: translate(-30%, 0);
-    width: 450px;
     flex-direction: column;
     background-color: transparent;
   }
@@ -293,7 +292,7 @@
     width: 70%;
   }
   .recommend-desc {
-    width: 90%;
+    width: 600px;
     text-align: center;
   }
   .recommend-item-name {
