@@ -16,7 +16,7 @@ $(function(){
 
 
   // 페이지 타이틀 입력
-  subH2.text(pageTitle[mainNum]);
+  //subH2.text(pageTitle[mainNum]);
   // LNB 화면에 표시(해상도에 따라)
   if(body.hasClass("mo")) { // 모바일이라면
     lnb.eq(mainNum).css("display", "none");

@@ -19,8 +19,8 @@
 /* 4. laptop~ 1280~ */
 @media screen and (min-width: 1280px) {
   .sub-hd-lnb > h2 {
-    width: 120rem;
-    height: calc(120rem * 16/9);
+    width: 1400px;
+    height: 780px;
   }
 }
 
