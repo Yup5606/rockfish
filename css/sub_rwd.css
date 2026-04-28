@@ -1,0 +1,28 @@
+@charset 'utf-8';
+/* 기본 *모바일 우선 */
+
+/* 1. mo-nomal */
+@media screen and (max-width: 767px) {
+}
+
+/* 2. tablet~ */
+@media screen and (min-width: 768px) {
+}
+
+/* 3-1. max tb */
+@media screen and (min-width: 840px) {
+}
+
+/* 3. only tb */
+@media screen and (min-width: 768px) and (max-width: 1279px) {}
+
+/* 4. laptop~ 1280~ */
+@media screen and (min-width: 1280px) {
+  .sub-hd-lnb > h2 {
+    width: 120rem;
+    height: calc(120rem * 16/9);
+  }
+}
+
+/* 5. laptop~ 1921~ */
+@media screen and (min-width: 1921px) {}

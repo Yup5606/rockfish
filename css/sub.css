@@ -1,0 +1,24 @@
+@charset 'utf-8';
+/* =============== 변수 ============== */
+:root {
+  --header-height: 64px;
+  --header-font-size: 13px;
+}
+.sub-hd * {
+  border: 1px solid red;
+}
+.sub-hd {
+  margin : var(--header-height) auto 0;
+}
+.rf-lnb-list {
+  display: none;
+}
+.rf-lnb-depth1 > a {
+  display: none;
+}
+.sub-hd-lnb > h2 {
+  margin : 1rem auto 0;
+  width: 24rem;
+  height: 16rem;
+  background-color: var(--primary-color);
+}
