@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rockfish weatherwear</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common_rwd.css">
+    <link rel="stylesheet" href="css/sub.css">
+    <link rel="stylesheet" href="css/sub_rwd.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/lenis.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/sub.js"></script>  <!-- 순서중요 제이쿼리 쓰려면 위 3줄 꼭 첨부-->
+    <style>
+      .career1-container {
+        width: 100%;
+        height: 500px;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: #333;
+      }
+    </style>
+</head>
+<body class="sub0-0 sub">
+
+  <!-- 1. 바로가기 메뉴 -->
+  <div id="cv-skip">
+      <a class="blind" href="#rockfish-main">본문 바로가기</a>
+      <a class="blind" href="#rockfish-gnb">주 메뉴 바로가기</a>
+      <a class="blind" href="#rockfish-lnb">서브 메뉴 바로가기</a>
+      <a class="blind" href="#rockfish-ft">하단 정보 바로가기</a>
+  </div>
+   
+  <header id="rockfish-hd" class="second">
+    <div class="hd-container wrap">
+      <h1 class="logo"> <!-- 헤더로고 -->
+        <a href="index.html"><img src="images/logo/logo_white.svg" alt="로고"></a>
+      </h1>
+      <button class="mo-btn-sitemap">
+        <span class="blind">전체메뉴</span>
+      </button>
+      <nav id="rockfish-gnb"> <!-- 헤더 gnb -->
+        <ol class="rockfish-gnb">
+          <li class="rf-depth1">
+            <a href="new.html">Shop</a> <!-- 서브 페이지로 a 변경 해줘야함 -->
+            <div class="rf-depth2-wrap">
+              <ul class="rf-depth2">
+                <li><a href="new.html">New</a></li>
+                <li><a href="#">Exclusive</a></li>
+                <li><a href="#">Shoes</a></li>
+                <li><a href="#">Acc</a></li>
+                <li><a href="#">Etc</a></li>
+                <li><a href="#">Clothing</a></li>
+                <li><a href="#">Winter</a></li>
+                <li><a href="#">Rockfish Node</a></li>
+                <li><a href="#">Collaboration</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="rf-depth1">
+            <a href="editorial.html">Editorial</a>
+            <div class="rf-depth2-wrap">
+              <ul class="rf-depth2">
+              <li><a href="editorial.html">ALL SEASON</a></li>
+              <li><a href="#">26SS</a></li>
+              <li><a href="#">25FW</a></li>
+              <li><a href="#">25SS</a></li>
+              <li><a href="#">24FW</a></li>
+              <li><a href="#">24SS</a></li>
+              <li><a href="#">23FW</a></li>
+              <li><a href="#">23SS</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="rf-depth1">
+            <a href="#">More</a>
+            <div class="rf-depth2-wrap">
+              <ul class="rf-depth2">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Store</a></li>
+              <li><a href="#">Membership</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="rf-depth1">
+            <a href="#">Clor</a>
+            <div class="rf-depth2-wrap">
+              <ul class="rf-depth2">
+              <li><a href="#">New</a></li>
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Acc</a></li>
+              <li><a href="#">Shoes</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="rf-depth1">
+            <a href="#">Brand</a>
+            <div class="rf-depth2-wrap">
+              <ul class="rf-depth2">
+              <li><a href="#">Company</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Career</a></li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </nav>
+      <nav class="util-menu clearfix">  <!-- 헤더 언어/로그인 -->
+        <ul class="util-menu-wrap">
+          <li class="lang-wrap">
+            <button class="btn-lang">
+              <span class="blind">언어선택</span>
+            </button>
+            <ul class="lang-list">
+              <li><a href="#">KO</a></li>
+              <li><a href="#">EN</a></li>
+              <li><a href="#">CH</a></li>
+            </ul>
+          </li>
+          <li><a href="#">SEARCH</a></li>
+          <li><a href="#">WISH</a></li>
+          <li><a href="#">CART</a></li>
+          <li><a href="#">LOG-IN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+ 
+  <!-- 모바일 사이트맵 -->
+  <div class="mo-gnb-sitemap">
+    <div class="mo-gnb-top">
+      <div class="mo-search-wrap">
+        <input type="text" class="mo-search-input" placeholder="Search">
+        <button class="mo-search-btn">
+          <span class="blind">검색</span>
+        </button>
+      </div>
+      <button class="mo-btn-close">
+        <span class="blind">닫기</span>
+      </button>
+    </div>
+    <div class="mo-util-menu">
+      <ul>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Cart</a></li>
+      </ul>
+    </div>
+    <nav id="mo-rockfish-gnb">
+      <ol class="mo-rockfish-gnb">
+        <li class="rf-lnb-depth1">
+          <a href="#">Shop</a>
+          <ul class="rf-lnb-depth2">
+            <li><a href="#">New</a></li>
+            <li><a href="#">Exclusive</a></li>
+            <li><a href="#">Shoes</a></li>
+            <li><a href="#">Acc</a></li>
+            <li><a href="#">Etc</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Winter</a></li>
+            <li><a href="#">Rockfish Node</a></li>
+            <li><a href="#">Collaboration</a></li>
+          </ul>
+        </li>
+        <li class="rf-lnb-depth1">
+          <a href="#">Editorial</a>
+          <ul class="rf-lnb-depth2">
+            <li><a href="#">ALL SEASON</a></li>
+            <li><a href="#">26SS</a></li>
+            <li><a href="#">25FW</a></li>
+            <li><a href="#">25SS</a></li>
+            <li><a href="#">24FW</a></li>
+            <li><a href="#">24SS</a></li>
+            <li><a href="#">23FW</a></li>
+            <li><a href="#">23SS</a></li>
+          </ul>
+        </li>
+        <li class="rf-lnb-depth1">
+          <a href="#">More</a>
+          <ul class="rf-lnb-depth2">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Membership</a></li>
+          </ul>
+        </li>
+        <li class="rf-lnb-depth1">
+          <a href="#">Clor</a>
+          <ul class="rf-lnb-depth2">
+            <li><a href="#">New</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Acc</a></li>
+            <li><a href="#">Shoes</a></li>
+          </ul>
+        </li>
+        <li class="rf-lnb-depth1">
+          <a href="#">Brand</a>
+          <ul class="rf-lnb-depth2">
+            <li><a href="#">Company</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </li>
+      </ol>
+    </nav>
+    <div class="mo-lang-wrap">
+      <button class="mo-btn-lang">
+        <span class="blind">언어선택</span>
+      </button>
+      <ul class="mo-lang-list">
+        <li><a href="#">KO</a></li>
+        <li><a href="#">EN</a></li>
+        <li><a href="#">CH</a></li>
+      </ul>
+    </div>
+  </div>
+
+<!-- 3. 서브헤더 & 비주얼 -->
+  <header class="sub-hd">
+      <section class="sub-hd-lnb wrap">
+          <h2></h2>
+          <nav id="rockfish-lnb">
+            <h3 class="blind">LNB 서브메뉴</h3>
+            <ol>
+              <li class="rf-lnb-depth1">
+                <a href="#" >Shop</a>
+                <ul class="rf-lnb-depth2 rf-lnb-list">
+                  <li><a href="new.html" class="rf-lnb-btn">New</a></li>
+                  <li><a href="#">Exclusive</a></li>
+                  <li><a href="#">Shoes</a></li>
+                  <li><a href="#">Acc</a></li>
+                  <li><a href="#">Etc</a></li>
+                  <li><a href="#">Clothing</a></li>
+                  <li><a href="#">Winter</a></li>
+                  <li><a href="#">Rockfish Node</a></li>
+                  <li><a href="#">Collaboration</a></li>
+                </ul>
+              </li>
+              <li class="rf-lnb-depth1">
+                <a href="editorial.html">Editorial</a>
+                <ul class="rf-lnb-depth2 rf-lnb-list">
+                  <li><a href="editorial.html">ALL SEASON</a></li>
+                  <li><a href="#">26SS</a></li>
+                  <li><a href="#">25FW</a></li>
+                  <li><a href="#">25SS</a></li>
+                  <li><a href="#">24FW</a></li>
+                  <li><a href="#">24SS</a></li>
+                  <li><a href="#">23FW</a></li>
+                  <li><a href="#">23SS</a></li>
+                </ul>
+              </li>
+              <li class="rf-lnb-depth1">
+                <a href="#">More</a>
+                <ul class="rf-lnb-depth2 rf-lnb-list">
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Store</a></li>
+                  <li><a href="#">Membership</a></li>
+                </ul>
+              </li>
+              <li class="rf-lnb-depth1">
+                <a href="#">Clor</a>
+                <ul class="rf-lnb-depth2 rf-lnb-list">
+                  <li><a href="#">New</a></li>
+                  <li><a href="#">Clothing</a></li>
+                  <li><a href="#">Acc</a></li>
+                  <li><a href="#">Shoes</a></li>
+                </ul>
+              </li>
+              <li class="rf-lnb-depth1">
+                <a href="#">Brand</a>
+                <ul class="rf-lnb-depth2 rf-lnb-list">
+                  <li><a href="#">Company</a></li>
+                  <li><a href="#">History</a></li>
+                  <li><a href="#">Career</a></li>
+                </ul>
+              </li>
+            </ol>
+          </nav>
+      </section>
+      <div class="sub-hd-bg"><span class="blind">서브 비주얼 배경이미지</span></div>
+  </header>
+
+  <!-- 3. 메인영역 -->
+  <main id="rf-main">
+      <section class="sub-sec best-item-sec wrap">
+          <h2>NEW BEST</h2>
+          <div class="career1-container">
+              
+          </div>
+      </section>
+  </main>
+
+  <!-- 7번 푸터 -->
+  <footer id="rockfish-ft">
+    <div class="ft-wrap">
+    
+      <!-- 좌측 정보 -->
+      <div class="ft-left">
+        <div class="ft-sns">
+          <svg class="ft-insta-icon" viewBox="0 0 24 24">
+            <path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.8a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
+          </svg>
+        </div>
+      
+        <div class="ft-info">
+          <p>주식회사 에이유브랜즈 | 락피쉬웨더웨어</p>
+          <p>C. Kim Jihun</p>
+          <p>04782 68, Achasan-ro, Seongdong-gu, Seoul 4F</p>
+          <p>AU BRANDZ CO., LTD. I B. 578-81-02548</p>
+          <p>© RockfishWeatherwear.</p>
+          <p>O.제 2022-서울성동-00329 호</p>
+        </div>
+      </div>
+    
+      <!-- 우측 메뉴 -->
+      <div class="ft-right">
+        <ul>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Editorial</a></li>
+          <li><a href="#">More</a></li>
+          <li><a href="#">Clor</a></li>
+          <li><a href="#">26SS Collection</a></li>
+        </ul>
+      </div>
+    
+    </div>
+  
+    <!-- 큰 텍스트 -->
+    <div class="ft-bottom-logo">
+      <img src="images/logo/logo_wide.svg" alt="인스타그램">
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+</html>
