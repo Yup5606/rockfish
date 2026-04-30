@@ -3,8 +3,10 @@
 
 /* 1. mo-nomal */
 @media screen and (max-width: 767px) {
-  .sub-hd {
-    margin : var(--header-height) auto 0;
+  .sub-hd-bg {
+    border-radius: 5%;
+    width: 90vw;
+    height: 90vw;
   }
 }
 
@@ -24,9 +26,18 @@
 
 /* 4. laptop~ 1280~ */
 @media screen and (min-width: 1280px) {
-  .sub-hd-lnb > h2 {
-    width: 1400px;
-    height: 780px;
+  .sub-wrap {
+    padding: 0 var(--spacing-l);
+  }
+  .sub-hd {
+    margin : calc(var(--header-height) + 3rem) auto 0;
+  }
+  .sub-hd-bg {
+    width: 100vw;
+    height:80vh;
+  }
+  .rf-lnb-depth1 {  
+    font-size: 1.2em;
   }
 }
 

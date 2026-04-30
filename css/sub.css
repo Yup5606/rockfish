@@ -4,34 +4,45 @@
   --header-height: 64px;
   --header-font-size: 13px;
 }
+.sub-wrap {
+    padding: 0 var(--spacing-l);
+}
 .sub-hd * {
   /* border: 1px solid red; */
 }
 .sub-hd {
-  margin : calc(var(--header-height) + 3rem) auto 0;
+  margin : calc(var(--header-height) + 1rem) auto 0;
 }
 #rockfish-lnb ol{
   /* display: flex; */
 }
-.sub-hd-lnb > h2 {
-  margin : 1rem auto 0;
+.sub-hd-bg {
+  margin : 0 auto;
   text-align: center;
-  width: 300px;
-  height: 200px;
+  max-width: 1400px;
+  border-radius: 24px;
+  width: 100vh;
+  height:80vh;
 }
 .sub-hd-bg1 {
-  background : url('../images/sub/sub_header/sub_header_1.webp') center center /contain  no-repeat ;  
+  background : url('../images/sub/sub_header/sub_header_1.webp') top center /cover  no-repeat ;  
 }
 .sub-hd-bg2 {
-  background : url('../images/sub/sub_header/sub_header_2.webp') center center /contain  no-repeat ;
+  background : url('../images/sub/sub_header/sub_header_2.webp') top center /cover  no-repeat ;
 }
 .rf-lnb-depth1 {  
   position: relative;
-  display: block;
+  display: none;
   width: 100%;
   overflow: hidden;
   overflow-x: auto;
+  padding: var(--spacing-xs) var(--spacing-xs);
+  scrollbar-color:  var(--primary-color) #fff;
 }
+.rf-lnb-depth1.active {
+  display: block;
+}
+
 .rf-lnb-depth1 > a {
   display: none;
 }
@@ -46,7 +57,6 @@
   -webkit-overflow-scrolling: touch;
   scrollbar-width: thin; /* auto, thin, none */
 }
-
 .rf-lnb-list {
   display: flex;
 }
@@ -57,7 +67,6 @@
 /* 3. 컬렉션 영역 */
 .sub-sec {
   padding: var(--spacing-xs) 0;
-  padding-top: 47px;
 }
 .collection-wrap {
   height: 800px;
@@ -178,13 +187,14 @@
   vertical-align: middle;
 }
 /* 3-1 컬렉션 영역 하단 박스 영역 */
-.collection-item-wrap {
+.collection-item-wrap, .new-item-wrap {
   position: relative;
   display: block;
   width: 100%;
   padding: 16px;
   overflow: hidden;
 }
+
 .collection-card-list {
   display: flex;
   gap: 12px;
@@ -196,6 +206,13 @@
 .collection-card-list:-webkit-scrollbar {
   display: none;
 }
+
+.new-card-list {
+  display: inline-flex;
+  gap: 12px;
+  padding: 12px;
+}
+
 .card-item {
   position: relative;
   display: block;
@@ -210,6 +227,11 @@
   overflow: hidden;
   scroll-snap-align: start;
 }
+.new-card-list .card-item {
+  background-color: transparent;
+  width: 50%;
+}
+
 .card-inner {
   position: relative;
   display: flex;

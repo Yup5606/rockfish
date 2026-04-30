@@ -13,8 +13,7 @@ $(function(){
   mainNum = bodyNum[0].slice(3,4);
   subNum = bodyNum[0].slice(5,6);
   let subEl = lnb.eq(mainNum).children().eq(subNum);
-
-
+  let lnbDepth1 = $(".rockfish-lnb").children().eq(mainNum);
   // 페이지 타이틀 입력
   //subH2.text(pageTitle[mainNum]);
   // LNB 화면에 표시(해상도에 따라)
@@ -26,6 +25,7 @@ $(function(){
   }
 
   // 활성화되는 서브메뉴
+  lnbDepth1.addClass("active");
   subEl.addClass("active");
   
   // 모바일 LNB Label 입력
