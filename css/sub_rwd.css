@@ -3,10 +3,21 @@
 
 /* 1. mo-nomal */
 @media screen and (max-width: 767px) {
+  .sub-hd-bg {
+    border-radius: 5%;
+    width: 90vw;
+    height: 90vw;
+  }
+  .new-card-list .card-item:nth-child(n+7) {
+      display: none;
+  }
 }
 
 /* 2. tablet~ */
 @media screen and (min-width: 768px) {
+  .rf-lnb-depth1:-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* 3-1. max tb */
@@ -18,10 +29,35 @@
 
 /* 4. laptop~ 1280~ */
 @media screen and (min-width: 1280px) {
-  .sub-hd-lnb > h2 {
-    width: 120rem;
-    height: calc(120rem * 16/9);
+  .sub-wrap {
+    padding: 0 var(--spacing-l);
   }
+  .sub-hd {
+    margin : calc(var(--header-height) + 3rem) auto 0;
+  }
+  .sub-hd-bg {
+    width: 100vw;
+    height:80vh;
+  }
+  .rf-lnb-depth1 {  
+    font-size: 1.2em;
+  }
+
+  #rf-sub-main h2 {
+    padding: 1em 0;
+  }
+  .new-card-list {
+    gap: 3em;
+  }
+  .new-card-list .card-item {
+      min-width: 190px;
+      max-width: 300px;
+      width: 100%;
+  }
+  .new-card-list .card-item:nth-child(n+11) {
+      display: none;
+  }
+  
 }
 
 /* 5. laptop~ 1921~ */
