@@ -6,7 +6,7 @@
   .hero-video-pc{
   display: none;
 }
-}
+}       
 
 /* 2. tablet~ */
 @media screen and (min-width: 768px) {

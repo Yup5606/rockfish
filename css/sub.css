@@ -199,7 +199,7 @@
   display: flex;
   gap: 12px;
   overflow-x: auto;
-  padding: 12px;
+  padding: var(--spacing-xs) 0;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }
@@ -208,12 +208,16 @@
 }
 
 .new-card-list {
-  display: inline-flex;
-  gap: 12px;
-  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 12px 0;
 }
-
-.card-item {
+.new-card-list * {
+  /* border: 1px solid red; */
+}
+.collection-card-list .card-item {
   position: relative;
   display: block;
   flex: 1;
@@ -229,9 +233,9 @@
 }
 .new-card-list .card-item {
   background-color: transparent;
-  width: 50%;
+  box-shadow: none;
+  width: 150px;
 }
-
 .card-inner {
   position: relative;
   display: flex;
