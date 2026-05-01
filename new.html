@@ -11,23 +11,23 @@
     <link rel="stylesheet" href="css/common_rwd.css">
     <link rel="stylesheet" href="css/sub.css">
     <link rel="stylesheet" href="css/sub_rwd.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/lenis.min.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/sub.js"></script>  순서중요 제이쿼리 쓰려면 위 3줄 꼭 첨부
+    <script src="js/sub.js"></script> 
 </head>
-<body class="sub0-0 sub">
+<body class="sub1-0 sub">
 
   <!-- 1. 바로가기 메뉴 -->
-  <div id="cv-skip">
+  <div id="rf-skip">
       <a class="blind" href="#rockfish-main">본문 바로가기</a>
       <a class="blind" href="#rockfish-gnb">주 메뉴 바로가기</a>
       <a class="blind" href="#rockfish-lnb">서브 메뉴 바로가기</a>
       <a class="blind" href="#rockfish-ft">하단 정보 바로가기</a>
   </div>
-   
+
   <header id="rockfish-hd" class="second">
     <div class="hd-container wrap">
       <h1 class="logo"> <!-- 헤더로고 -->
@@ -39,7 +39,7 @@
       <nav id="rockfish-gnb"> <!-- 헤더 gnb -->
         <ol class="rockfish-gnb">
           <li class="rf-depth1">
-            <a href="new.html">Shop</a> <!-- 서브 페이지로 a 변경 해줘야함 -->
+            <a href="#">Shop</a> <!-- 서브 페이지로 a 변경 해줘야함 -->
             <div class="rf-depth2-wrap">
               <ul class="rf-depth2">
                 <li><a href="new.html">New</a></li>
@@ -58,7 +58,7 @@
             <a href="editorial.html">Editorial</a>
             <div class="rf-depth2-wrap">
               <ul class="rf-depth2">
-              <li><a href="editorial.html">ALL SEASON</a></li>
+              <li><a href="#">ALL SEASON</a></li>
               <li><a href="#">26SS</a></li>
               <li><a href="#">25FW</a></li>
               <li><a href="#">25SS</a></li>
@@ -122,12 +122,12 @@
       </nav>
     </div>
   </header>
- 
+
   <!-- 모바일 사이트맵 -->
   <div class="mo-gnb-sitemap">
     <div class="mo-gnb-top">
       <div class="mo-search-wrap">
-        <input type="text"  id="mo-search-input" class="mo-search-input" placeholder="Search">
+        <input type="text" class="mo-search-input" placeholder="Search">
         <button class="mo-search-btn">
           <span class="blind">검색</span>
         </button>
@@ -144,10 +144,10 @@
     </div>
     <nav id="mo-rockfish-gnb">
       <ol class="mo-rockfish-gnb">
-        <li class="rf-lnb-depth1">
+        <li class="mo-rf-depth1">
           <a href="#">Shop</a>
-          <ul class="rf-lnb-depth2">
-            <li><a href="#">New</a></li>
+          <ul class="mo-rf-depth2">
+            <li><a href="new.html">New</a></li>
             <li><a href="#">Exclusive</a></li>
             <li><a href="#">Shoes</a></li>
             <li><a href="#">Acc</a></li>
@@ -158,9 +158,9 @@
             <li><a href="#">Collaboration</a></li>
           </ul>
         </li>
-        <li class="rf-lnb-depth1">
-          <a href="#">Editorial</a>
-          <ul class="rf-lnb-depth2">
+        <li class="mo-rf-depth1">
+          <a href="editorial.html">Editorial</a>
+          <ul class="mo-rf-depth2">
             <li><a href="#">ALL SEASON</a></li>
             <li><a href="#">26SS</a></li>
             <li><a href="#">25FW</a></li>
@@ -171,26 +171,26 @@
             <li><a href="#">23SS</a></li>
           </ul>
         </li>
-        <li class="rf-lnb-depth1">
+        <li class="mo-rf-depth1">
           <a href="#">More</a>
-          <ul class="rf-lnb-depth2">
+          <ul class="mo-rf-depth2">
             <li><a href="#">About</a></li>
             <li><a href="#">Store</a></li>
             <li><a href="#">Membership</a></li>
           </ul>
         </li>
-        <li class="rf-lnb-depth1">
+        <li class="mo-rf-depth1">
           <a href="#">Clor</a>
-          <ul class="rf-lnb-depth2">
+          <ul class="mo-rf-depth2">
             <li><a href="#">New</a></li>
             <li><a href="#">Clothing</a></li>
             <li><a href="#">Acc</a></li>
             <li><a href="#">Shoes</a></li>
           </ul>
         </li>
-        <li class="rf-lnb-depth1">
+        <li class="mo-rf-depth1">
           <a href="#">Brand</a>
-          <ul class="rf-lnb-depth2">
+          <ul class="mo-rf-depth2">
             <li><a href="#">Company</a></li>
             <li><a href="#">History</a></li>
             <li><a href="#">Career</a></li>
@@ -530,8 +530,8 @@
           </li>
         </ul>
       </div>
-      <div class="list-paging">
-        <ol>
+      <div>
+        <ol class="list-paging">
           <li class=><a href="#" >1</a></li>
           <li class=><a href="#" >2</a></li>
           <li class=><a href="#" >3</a></li>

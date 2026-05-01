@@ -278,3 +278,18 @@
 .card-like.active i {
   color: var(--point-color);
 }
+.list-paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xs);
+  margin: var(--spacing-md) 0;
+}
+.list-paging::before {
+  display: block;
+  content: 'prev';  
+}
+.list-paging::after {
+  display: block;
+  content: 'next';  
+}
