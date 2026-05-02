@@ -8,6 +8,12 @@
     width: 90vw;
     height: 90vw;
   }
+  .rf-lnb-depth2 {
+    display: none; 
+    justify-content: left;
+    align-items: center; 
+    gap: 2em;
+  }
   .new-card-list .card-item:nth-child(n+7) {
       display: none;
   }
@@ -47,14 +53,16 @@
     padding: 1em 0;
   }
   .new-card-list {
-    gap: 3em;
+    margin: 0 auto;
+    max-width: 1620px;
+    gap: 2em;
   }
   .new-card-list .card-item {
       min-width: 190px;
-      max-width: 300px;
+      max-width: 240px;
       width: 100%;
   }
-  .new-card-list .card-item:nth-child(n+11) {
+  .new-card-list .card-item:nth-child(n+13) {
       display: none;
   }
   
