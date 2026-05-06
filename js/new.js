@@ -311,21 +311,5 @@ $(function(){
     for (let i = 1; i <= pageCount; i++) {
       pageList.append(`<li class=><a href="#" >${i}</a></li>`);
     }
-});
-
-// 3-1. CARD LIKE main.js 92 row 중복
-function cardLike() {
-  $(".card-like").on("click", function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const icon = $(this).find("i");
-    $(this).toggleClass("active");
-
-    icon.toggleClass("fa-solid fa-regular");
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  cardLike();
+    cardLike();
 });
