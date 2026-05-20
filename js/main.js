@@ -196,7 +196,7 @@ function realMoments() {
   let current = 1;
 
   const getImg = () => {
-    const src = `./images/insta/insta${current}.Webp`;
+    const src = `./images/insta/insta${current}.webp`;
     current++;
     if (current > imgCount) current = 1;
     return src;
