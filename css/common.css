@@ -2,11 +2,9 @@
 @import url('webfonts.css');
 /* =============== 변수 ============== */
 :root {
-  --primary-font: 'PT Serif', 'Pretendard Variable', sans-serif;
+  --primary-font: 'Playfair Display', 'Pretendard Variable', sans-serif;
   --secondary-font: 'Pretendard Variable', sans-serif;
-  --PTSerif-font: 'PT Serif', serif;
   --BookkMyungjo-font: 'BookkMyungjo', serif;
-  --playfair-font: "Playfair Display", serif;
   --primary-color: #142A74;
   --secondary-color: #F2F4F7;
   --primary-font-color: #142A74;
@@ -470,13 +468,4 @@ button {
 .ft-bottom-logo img {
   width: 100%;
   opacity: 0.3;
-}
-.logo-text {
-  font-family: var(--playfair-font);
-  font-size: 140px;
-  font-style: italic;
-  letter-spacing: 2px;
-}
-.logo-sub {
-  font-size: 120px;
 }
