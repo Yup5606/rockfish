@@ -1,13 +1,9 @@
-@charset 'utf-8';
+@charset "utf-8";
 /* 기본 *모바일 우선 */
 
 /* 1. mo-nomal */
 @media screen and (max-width: 767px) {
-  .sub-hd-bg {
-    border-radius: 5%;
-    width: 90vw;
-    height: 90vw;
-  }
+
   .rf-lnb-depth2 {
     display: none; 
     justify-content: left;
@@ -21,17 +17,40 @@
 
 /* 2. tablet~ */
 @media screen and (min-width: 768px) {
+  .sub-hd {
+    margin: calc(var(--header-height) + 3rem) auto 0;
+  }
+  .sub-hd-bg {
+    width: 700px;
+    max-width: 900px;
+    height: 400px;
+    max-height: 900px;
+  }
+
   .rf-lnb-depth1:-webkit-scrollbar {
     display: none;
   }
+  .rf-lnb-depth1 {
+    padding-top: var(--spacing-m);
+  }
+  .new-card-list {
+    gap: 1em;
+  }
+  .new-card-list .card-item {
+    min-width: 200px;
+    max-width: 240px;
+  }
+  .card-info {
+    font-size: 0.6rem;
+  }
+  .card-price {
+    font-size: 0.8rem;
+  }
+  .card-like {
+    width: 24px;
+    height: 24px;
+  }
 }
-
-/* 3-1. max tb */
-@media screen and (min-width: 840px) {
-}
-
-/* 3. only tb */
-@media screen and (min-width: 768px) and (max-width: 1279px) {}
 
 /* 4. laptop~ 1280~ */
 @media screen and (min-width: 1280px) {
@@ -42,11 +61,14 @@
     margin : calc(var(--header-height) + 3rem) auto 0;
   }
   .sub-hd-bg {
-    width: 100vw;
-    height:80vh;
+    width: 1000px;
+    max-width: inherit;
+    height: 600px;
+    max-height: inherit;
   }
   .rf-lnb-depth1 {  
     font-size: 1.2em;
+    padding-top: var(--spacing-m);
   }
 
   #rf-sub-main h2 {
@@ -54,18 +76,19 @@
   }
   .new-card-list {
     margin: 0 auto;
-    max-width: 1620px;
-    gap: 2em;
+    max-width: 1440px;
+    /* gap: 1em; */
   }
-  .new-card-list .card-item {
-      min-width: 190px;
-      max-width: 240px;
-      width: 100%;
+  .card-info {
+    font-size: 0.8rem;
   }
-  .new-card-list .card-item:nth-child(n+13) {
-      display: none;
+  .card-price {
+    font-size: 0.9rem;
   }
-  
+  .card-like {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 /* 5. laptop~ 1921~ */

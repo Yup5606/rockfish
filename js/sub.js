@@ -1,68 +1,47 @@
-$(function(){
-  // 페이지별 메인메뉴, 활성화되는 서브메뉴 제어
+$(function () {
   const body = $("body");
-  let lnb = $(".rf-lnb-list");
   const subH2 = $(".sub-hd-lnb h2");
-  const lnbBtn = $(".rf-lnb-btn");
   const subBg = $(".sub-hd-bg");
-  let bodyNum, mainNum, subNum;
-  bodyNum = body.attr("class");
-  bodyNum = bodyNum.split(" ");
-  mainNum = bodyNum[0].slice(3,4);
-  subNum = bodyNum[0].slice(5,6);
-  let lnbDepth1 = $(".rockfish-lnb").children().eq(mainNum);
-  lnbDepth1.addClass("rf-lnb-list");
-  let subEl = lnbDepth1.children().eq(0);
-  let lnbDepth2 = lnbDepth1.children().eq(1).children().eq(subNum);
-  // 페이지 타이틀 입력
+
+  const bodyClass = body.attr("class").split(" ")[0];
+  const mainNum = bodyClass.slice(3, 4);
+  const subNum = bodyClass.slice(5, 6);
+
+  const lnbDepth1 = $(".rockfish-lnb").children().eq(mainNum);
+  const subEl = lnbDepth1.children().eq(0);
+  const lnbDepth2 = lnbDepth1.children().eq(1).children().eq(subNum);
+
+  // 페이지 타이틀
   subH2.text(subEl.text());
-  // LNB 화면에 표시(해상도에 따라)
-  // if(body.hasClass("mo")) { // 모바일이라면
-  //   // lnb.eq(mainNum).css("display", "none");
-  // } else {
-  //   // lnb.eq(mainNum).css("display", "flex");
-  // }
 
-  // 활성화되는 서브메뉴
-  lnbDepth1.addClass("active");
+  // 현재 메뉴 활성화
+  lnbDepth1.addClass("rf-lnb-list active");
   subEl.addClass("active");
-  
-  // 모바일 LNB Label 입력
   lnbDepth2.addClass("active");
-  // console.log(lnbDepth2.text());
-  
-  // LNB 리스트 제어(해상도 리사이즈)
-  $(window).resize(function(){
-    // if(body.hasClass("mo")) { // 모바일이라면
-    //   // lnb.eq(mainNum).css("display", "none");
-    // } else {
-    //   lnb.eq(mainNum).css("display", "flex");
-    // }
-  });
-  
-  // LNB 제어(mo에서 버튼 클릭하면 하위리스트 열리기) 
-  lnbBtn.click(function(){
-    lnb.eq(mainNum).toggle();
-  });
 
-  // 서브배경이미지 설정
+  // 서브 비주얼 배경
   subBg.addClass(`bg${mainNum}-${subNum}`);
 
-});
-
-// 3-1. CARD LIKE main.js 92 row 중복
-function cardLike() {
-  $(".card-like").on("click", function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    const icon = $(this).find("i");
-    $(this).toggleClass("active");
-
-    icon.toggleClass("fa-solid fa-regular");
+  // LNB active
+  $(".rf-lnb-depth2 li a").on("click", function () {
+    $(".rf-lnb-depth2 li").removeClass("active");
+    $(this).parent().addClass("active");
   });
-}
 
-document.addEventListener('DOMContentLoaded', () => {
+  // 하트
+  function cardLike() {
+    $(".card-like").off("click").on("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      $(this).toggleClass("active");
+
+      const icon = $(this).find("i");
+
+      icon.toggleClass("fa-regular");
+      icon.toggleClass("fa-solid");
+    });
+  }
+
   cardLike();
 });

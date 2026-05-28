@@ -1,0 +1,169 @@
+@charset "utf-8";
+  
+.ready-page {
+  width: 100%;
+  min-height: 100vh;
+}
+.ready-sec {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #101722;
+}
+.ready-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.82;
+  transform: scale(1.05);
+  animation: readyBgZoom 1.8s ease forwards;
+}
+.ready-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 320px;
+}
+.ready-label,
+.ready-title,
+.ready-desc,
+.ready-btn {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: readyFadeUp 0.8s ease forwards;
+}
+.ready-label {
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  animation-delay: 0.1s;
+}
+.ready-title {
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  animation-delay: 0.25s;
+}
+.ready-desc {
+  margin-bottom: 32px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  word-break: keep-all;
+  animation-delay: 0.45s;
+}
+.ready-btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 160px;
+  height: 48px;
+  padding: 0 24px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.08);
+  transition:
+    color 0.35s ease,
+    border-color 0.35s ease,
+    transform 0.35s ease;
+  animation-delay: 0.65s;
+}
+.ready-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  transition: width 0.35s ease;
+  z-index: -1;
+}
+.ready-btn:hover {
+  color: #101722;
+}
+.ready-btn:hover::after {
+  width: 100%;
+}
+
+/* 테블릿 */
+@media (min-width: 769px) {
+  .ready-sec {
+    padding: 60px 40px;
+  }
+  .ready-content {
+    max-width: 640px;
+  }
+  .ready-label {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  .ready-title {
+    margin-bottom: 28px;
+    font-size: 4rem;
+  }
+  .ready-desc {
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+  }
+  .ready-btn {
+    min-width: 180px;
+    height: 52px;
+    font-size: 1.2rem;
+  }
+}
+
+/* pc */
+@media (min-width: 1280px) {
+  .ready-content {
+    max-width: 820px;
+  }
+  .ready-title {
+    font-size: 5rem;
+  }
+  .ready-desc {
+    font-size: 1rem;
+  }
+  .ready-btn:hover {
+    transform: translateY(-2px);
+  }
+}
+
+
+/* 애니메이션 */
+@keyframes readyFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes readyBgZoom {
+  0% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
