@@ -15,6 +15,17 @@
     <script src="js/lenis.min.js"></script>
     <script src="js/common.js"></script>
 </head>
+
+<script>
+  function goBack() {
+    if (history.length > 1) {
+      history.back();
+    } else {
+      location.href = "index.html";
+    }
+  }
+</script>
+
 <body>
 
   <!-- 1. 바로가기 메뉴 -->
@@ -219,7 +230,9 @@
           곧 더 완성도 있는 콘텐츠로 찾아뵙겠습니다.
         </p>
 
-        <a href="./index.html" class="ready-btn">BACK TO HOME</a>
+        <button type="button" class="coming-btn" onclick="goBack()">
+          Previous Page
+        </button>
       </div>
     </section>
   </main>
