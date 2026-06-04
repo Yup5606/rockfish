@@ -12,7 +12,7 @@ Rockfish Weatherwear의 브랜드 정체성을 강화하고
 
 ## Period
 
-2025.XX ~ 2025.XX
+2026.02.10 - 2026.03.02
 
 ---
 
@@ -45,7 +45,7 @@ Rockfish Weatherwear의 브랜드 정체성을 강화하고
 
 ## Live Site
 
-배포주소
+[Rockfish WeaterWear](https://rockfish-redesign.netlify.app/)
 
 ---
 
