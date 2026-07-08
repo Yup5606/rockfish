@@ -2,7 +2,7 @@
 @import url('webfonts.css');
 /* =============== 변수 ============== */
 :root {
-  --primary-font: 'Playfair Display', 'Pretendard Variable', sans-serif;
+  --primary-font: 'Playfair Display', 'Pretendard Variable', serif;
   --secondary-font: 'Pretendard Variable', sans-serif;
   --BookkMyungjo-font: 'BookkMyungjo', serif;
   --primary-color: #142A74;
@@ -136,6 +136,7 @@ button {
   align-items: center;
   height: 70px;
   padding: 0 40px;
+  font-family: var(--primary-font);
   font-size: 1.2em;
 }
 .rf-depth1 > a:hover {
@@ -184,6 +185,7 @@ button {
   gap: 15px;
 }
 .util-menu-wrap a {
+  font-family: var(--primary-font);
   font-size: 0.9em;
 }
 .util-menu a:hover {
